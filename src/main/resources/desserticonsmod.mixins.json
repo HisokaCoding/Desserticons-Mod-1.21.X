@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "net.hisoka.desserticonsmod.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"ExampleMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

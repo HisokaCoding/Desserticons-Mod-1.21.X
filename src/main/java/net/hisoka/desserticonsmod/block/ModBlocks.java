@@ -30,9 +30,5 @@ public class ModBlocks {
 
     public static void registerModBlocks(){
         DesserticonsMod.LOGGER.info("Registering Mod Blocks for " + DesserticonsMod.MOD_ID);
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(fabricItemGroupEntries -> {
-            fabricItemGroupEntries.add(ModBlocks.DESSERTICOIN_BLOCK);
-        });
     }
 }

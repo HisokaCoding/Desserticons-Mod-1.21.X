@@ -1,5 +1,7 @@
 {
   "item.desserticonsmod.desserticoin": "Desserticoin",
 
-  "block.desserticonsmod.desserticoin_block": "Block of Desserticoins"
+  "block.desserticonsmod.desserticoin_block": "Block of Desserticoins",
+
+  "itemgroup.desserticonsmod.desserticons_items": "Desserticons Items"
 }

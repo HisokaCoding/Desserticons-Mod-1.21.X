@@ -19,9 +19,5 @@ public class ModItems {
 
     public static void registerModItems(){
         DesserticonsMod.LOGGER.info("Registering Mod Items for " + DesserticonsMod.MOD_ID);
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(fabricItemGroupEntries -> {
-            fabricItemGroupEntries.add(DESSERTICOIN);
-        });
     }
 }

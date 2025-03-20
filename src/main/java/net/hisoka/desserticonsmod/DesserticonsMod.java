@@ -3,6 +3,7 @@ package net.hisoka.desserticonsmod;
 import net.fabricmc.api.ModInitializer;
 
 import net.hisoka.desserticonsmod.block.ModBlocks;
+import net.hisoka.desserticonsmod.item.ModItemGroups;
 import net.hisoka.desserticonsmod.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,6 +14,7 @@ public class DesserticonsMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 	}

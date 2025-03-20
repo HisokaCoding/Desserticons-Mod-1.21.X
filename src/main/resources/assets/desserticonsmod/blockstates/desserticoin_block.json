@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "desserticonsmod:block/desserticoin_block"
+    }
+  }
+}

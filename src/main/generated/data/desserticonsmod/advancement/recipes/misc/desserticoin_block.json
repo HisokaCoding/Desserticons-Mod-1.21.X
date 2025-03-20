@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_desserticoin": {
+      "conditions": {
+        "items": [
+          {
+            "items": "desserticonsmod:desserticoin"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:desserticoin_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_desserticoin"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:desserticoin_block"
+    ]
+  }
+}

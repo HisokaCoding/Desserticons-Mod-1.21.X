@@ -8,6 +8,7 @@ import net.hisoka.desserticonsmod.entity.ModEntities;
 import net.hisoka.desserticonsmod.entity.custom.CabbaEntity;
 import net.hisoka.desserticonsmod.item.ModItemGroups;
 import net.hisoka.desserticonsmod.item.ModItems;
+import net.hisoka.desserticonsmod.world.gen.ModEntitySpawns;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,6 +22,7 @@ public class DesserticonsMod implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModEntities.registerModEntities();
+		ModEntitySpawns.addSpawn();
 
 		FabricDefaultAttributeRegistry.register(ModEntities.CABBA, CabbaEntity.createMobAttributes());
 	}

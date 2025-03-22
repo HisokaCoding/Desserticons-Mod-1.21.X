@@ -6,13 +6,12 @@ import net.minecraft.entity.AnimationState;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.LookAtEntityGoal;
 import net.minecraft.entity.ai.goal.WanderAroundFarGoal;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.screen.MerchantScreenHandler;
-import net.minecraft.screen.SimpleNamedScreenHandlerFactory;
-import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.sound.SoundEvent;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
@@ -33,6 +32,20 @@ public class CabbaEntity extends PathAwareEntity implements Merchant {
         if (this.getWorld().isClient()) {
             this.updateAnimations();
         }
+    }
+
+    protected SoundEvent getAmbientSound() {
+        return SoundEvents.ENTITY_SKELETON_AMBIENT;
+    }
+
+    @Override
+    protected SoundEvent getDeathSound() {
+        return SoundEvents.ENTITY_SKELETON_DEATH;
+    }
+
+    @Override
+    protected SoundEvent getHurtSound(DamageSource source) {
+        return SoundEvents.ENTITY_SKELETON_HURT;
     }
 
     private void updateAnimations() {

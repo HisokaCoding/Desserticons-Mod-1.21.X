@@ -19,6 +19,7 @@ public class ModItemGroups {
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.DESSERTICOIN);
                         entries.add(ModBlocks.DESSERTICOIN_BLOCK);
+                        entries.add(ModItems.CABBA_SPAWN_EGG);
                     }).build());
 
     public static void registerItemGroups(){

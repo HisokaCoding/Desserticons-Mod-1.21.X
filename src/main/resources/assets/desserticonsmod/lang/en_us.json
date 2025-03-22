@@ -1,7 +1,10 @@
 {
   "item.desserticonsmod.desserticoin": "Desserticoin",
+  "item.desserticonsmod.cabba_spawn_egg": "Cabba Spawn Egg",
 
   "block.desserticonsmod.desserticoin_block": "Block of Desserticoins",
 
-  "itemgroup.desserticonsmod.desserticons_items": "Desserticons Items"
+  "itemgroup.desserticonsmod.desserticons_items": "Desserticons Items",
+
+  "entity.desserticonsmod.cabba": "Cabba"
 }

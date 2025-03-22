@@ -2,6 +2,7 @@ package net.hisoka.desserticonsmod.entity.custom;
 
 
 import net.hisoka.desserticonsmod.item.ModItems;
+import net.hisoka.desserticonsmod.sound.ModSounds;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.goal.*;
@@ -40,18 +41,16 @@ public class TimanEntity extends PathAwareEntity {
     }
 
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.ENTITY_RABBIT_AMBIENT;
+        return ModSounds.TIMAN_AMBIENT;
     }
 
     @Override
     protected SoundEvent getDeathSound() {
-        return SoundEvents.ENTITY_RABBIT_DEATH;
+        return ModSounds.TIMAN_DEATH;
     }
 
     @Override
-    protected SoundEvent getHurtSound(DamageSource source) {
-        return SoundEvents.ENTITY_RABBIT_HURT;
-    }
+    protected SoundEvent getHurtSound(DamageSource source) {return ModSounds.TIMAN_HURT;}
 
     protected void initGoals() {
         this.goalSelector.add(1, new SwimGoal(this));

@@ -1,0 +1,20 @@
+{
+  "timan_ambient": {
+    "subtitle": "sounds.desserticonsmod.timan_ambient",
+    "sounds": [
+      "desserticonsmod:timan_ambient"
+    ]
+  },
+  "timan_hurt": {
+    "subtitle": "sounds.desserticonsmod.timan_hurt",
+    "sounds": [
+      "desserticonsmod:timan_hurt"
+    ]
+  },
+  "timan_death": {
+    "subtitle": "sounds.desserticonsmod.timan_death",
+    "sounds": [
+      "desserticonsmod:timan_death"
+    ]
+  }
+}

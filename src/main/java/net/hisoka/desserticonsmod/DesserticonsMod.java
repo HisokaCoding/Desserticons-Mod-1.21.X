@@ -9,6 +9,7 @@ import net.hisoka.desserticonsmod.entity.custom.CabbaEntity;
 import net.hisoka.desserticonsmod.entity.custom.TimanEntity;
 import net.hisoka.desserticonsmod.item.ModItemGroups;
 import net.hisoka.desserticonsmod.item.ModItems;
+import net.hisoka.desserticonsmod.sound.ModSounds;
 import net.hisoka.desserticonsmod.world.gen.ModEntitySpawns;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,6 +25,7 @@ public class DesserticonsMod implements ModInitializer {
 		ModBlocks.registerModBlocks();
 		ModEntities.registerModEntities();
 		ModEntitySpawns.addSpawn();
+		ModSounds.registerSounds();
 
 		FabricDefaultAttributeRegistry.register(ModEntities.CABBA, CabbaEntity.createMobAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.TIMAN, TimanEntity.createMobAttributes());

@@ -10,7 +10,7 @@ import net.minecraft.util.Identifier;
 
 public class CabbaRenderer extends MobEntityRenderer<CabbaEntity, CabbaModel<CabbaEntity>> {
     public CabbaRenderer(EntityRendererFactory.Context context) {
-        super(context, new CabbaModel<>(context.getPart(CabbaModel.CABBA)), 0.75f);
+        super(context, new CabbaModel<>(context.getPart(CabbaModel.CABBA)), 0.65f);
     }
 
     @Override

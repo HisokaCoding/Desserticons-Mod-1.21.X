@@ -11,7 +11,7 @@ import net.minecraft.util.Identifier;
 
 public class TimanRenderer extends MobEntityRenderer<TimanEntity, TimanModel<TimanEntity>> {
     public TimanRenderer(EntityRendererFactory.Context context) {
-        super(context, new TimanModel<>(context.getPart(TimanModel.TIMAN)), 0.75f);
+        super(context, new TimanModel<>(context.getPart(TimanModel.TIMAN)), 0.25f);
     }
 
     @Override

@@ -5,12 +5,13 @@ import net.hisoka.desserticonsmod.item.ModItems;
 import net.minecraft.entity.AnimationState;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.LookAtEntityGoal;
+import net.minecraft.entity.ai.goal.PowderSnowJumpGoal;
+import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.ai.goal.WanderAroundFarGoal;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
@@ -79,8 +80,10 @@ public class CabbaEntity extends PathAwareEntity implements Merchant {
 
     @Override
     protected void initGoals() {
-        this.goalSelector.add(1, new WanderAroundFarGoal(this, 0.3));
-        this.goalSelector.add(2, new LookAtEntityGoal(this, PlayerEntity.class, 8.0f));
+        this.goalSelector.add(1, new SwimGoal(this));
+        this.goalSelector.add(1, new PowderSnowJumpGoal(this, this.getWorld()));
+        this.goalSelector.add(6, new WanderAroundFarGoal(this, 0.3));
+        this.goalSelector.add(11, new LookAtEntityGoal(this, PlayerEntity.class, 8.0f));
     }
 
 

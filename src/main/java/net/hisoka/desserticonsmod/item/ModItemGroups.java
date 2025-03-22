@@ -22,6 +22,7 @@ public class ModItemGroups {
                         entries.add(ModItems.ENERGYDRINK);
                         entries.add(ModBlocks.DESSERTICOIN_BLOCK);
                         entries.add(ModItems.CABBA_SPAWN_EGG);
+                        entries.add(ModItems.TIMAN_SPAWN_EGG);
                     }).build());
 
     public static void registerItemGroups(){

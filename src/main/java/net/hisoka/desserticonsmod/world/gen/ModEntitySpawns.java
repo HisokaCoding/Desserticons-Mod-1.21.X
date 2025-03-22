@@ -8,5 +8,6 @@ import net.minecraft.entity.SpawnGroup;
 public class ModEntitySpawns {
     public static void addSpawn() {
         BiomeModifications.addSpawn(BiomeSelectors.foundInOverworld(), SpawnGroup.CREATURE, ModEntities.CABBA, 30, 1, 1);
+        BiomeModifications.addSpawn(BiomeSelectors.foundInOverworld(), SpawnGroup.CREATURE, ModEntities.TIMAN, 300, 3, 6);
     }
 }

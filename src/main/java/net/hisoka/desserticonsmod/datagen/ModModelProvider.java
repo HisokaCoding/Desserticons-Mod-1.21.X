@@ -25,6 +25,8 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.DESSERTICOIN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CIGARETTES, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ENERGYDRINK, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.CABBA_SPAWN_EGG,
                 new Model(Optional.of(Identifier.of("item/template_spawn_egg")),Optional.empty()));

@@ -10,6 +10,7 @@ import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
@@ -55,6 +56,22 @@ public class CabbaEntity extends PathAwareEntity implements Merchant {
         } else {
             this.idleAnimationCooldown--;
         }
+    }
+
+    @Override
+    public void onDeath(DamageSource source) {
+        super.onDeath(source);
+
+        // Выпадение предметов при смерти сущности
+        if (!this.getWorld().isClient) {
+            dropItems();
+        }
+    }
+
+    private void dropItems() {
+        this.dropItem(new ItemStack(ModItems.DESSERTICOIN, 1).getItem());
+        this.dropItem(new ItemStack(ModItems.CIGARETTES, 1).getItem());
+        this.dropItem(new ItemStack(ModItems.ENERGYDRINK, 1).getItem());
     }
 
     private final TradeOfferList tradeOffers = new TradeOfferList();

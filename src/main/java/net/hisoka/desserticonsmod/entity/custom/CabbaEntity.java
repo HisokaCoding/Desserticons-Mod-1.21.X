@@ -90,16 +90,16 @@ public class CabbaEntity extends PathAwareEntity implements Merchant {
 
     @Override
     public ActionResult interactMob(PlayerEntity player, Hand hand) {
-        if (!this.getWorld().isClient && player instanceof ServerPlayerEntity serverPlayer) {
-            this.setCustomer(player);
+        ItemStack itemStack = player.getStackInHand(hand);
+        if (!this.getWorld().isClient) {
+            if (this.getOffers().isEmpty()) {
+                return ActionResult.CONSUME;
+            }
             player.sendMessage(Text.literal("Братан, есть в долг?"), false);
-            serverPlayer.openHandledScreen(new SimpleNamedScreenHandlerFactory(
-                    (syncId, inventory, playerEntity) -> new MerchantScreenHandler(syncId, inventory, this),
-                    Text.literal("Торговец")
-            ));
-            return ActionResult.SUCCESS;
+            this.setCustomer(player);
+            this.sendOffers(player, this.getDisplayName(), 1);
         }
-        return super.interactMob(player, hand);
+        return ActionResult.success(this.getWorld().isClient);
     }
 
 

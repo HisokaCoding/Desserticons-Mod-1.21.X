@@ -303,11 +303,8 @@ public class CabbaModel<T extends CabbaEntity> extends SinglePartEntityModel<T> 
         this.getPart().traverse().forEach(ModelPart::resetTransform);
         this.setHeadAngles(netHeadYaw, headPitch);
 
-        if (CabbaEntity.isGreeting) {
-            this.animate(CabbaAnimations.CABBA_HELLO_ANIMATION);
-        } else {
-            this.animateMovement(CabbaAnimations.CABBA_WALK_ANIMATION, limbSwing, limbSwingAmount, 2.0f, 1.0f);
-        }
+        this.animateMovement(CabbaAnimations.CABBA_WALK_ANIMATION, limbSwing, limbSwingAmount, 2.0f, 1.0f);
+        this.updateAnimation(entity.idleAnimationState, CabbaAnimations.CABBA_HELLO_ANIMATION, ageInTicks, 1f);
     }
     @Override
     public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, int color) {

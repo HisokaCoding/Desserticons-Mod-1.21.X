@@ -1,18 +1,14 @@
 package net.hisoka.desserticonsmod.entity.custom;
 
-import io.netty.buffer.Unpooled;
-import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.hisoka.desserticonsmod.block.ModBlocks;
 import net.hisoka.desserticonsmod.item.ModItems;
-import net.hisoka.desserticonsmod.network.EntityGreetingS2CPacket;
+import net.minecraft.entity.AnimationState;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.LookAtEntityGoal;
 import net.minecraft.entity.ai.goal.WanderAroundFarGoal;
 import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.network.PacketByteBuf;
-import net.minecraft.network.packet.s2c.common.CustomPayloadS2CPacket;
 import net.minecraft.screen.MerchantScreenHandler;
 import net.minecraft.screen.SimpleNamedScreenHandlerFactory;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -20,7 +16,6 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
-import net.minecraft.util.Identifier;
 import net.minecraft.village.Merchant;
 import net.minecraft.village.TradeOffer;
 import net.minecraft.village.TradeOfferList;
@@ -30,18 +25,22 @@ import org.jetbrains.annotations.Nullable;
 
 public class CabbaEntity extends PathAwareEntity implements Merchant {
 
-    public static boolean isGreeting = false;
+    public AnimationState idleAnimationState = new AnimationState();
+    private int idleAnimationCooldown = 0;
 
-    @Override
     public void tick() {
         super.tick();
-        if (!this.getWorld().isClient) return;
+        if (this.getWorld().isClient()) {
+            this.updateAnimations();
+        }
+    }
 
-        PlayerEntity player = this.getWorld().getClosestPlayer(this, 10.0);
-        if (player != null && this.squaredDistanceTo(player) < 25.0) {
-            this.isGreeting = true;
+    private void updateAnimations() {
+        if (this.idleAnimationCooldown <= 0) {
+            this.idleAnimationCooldown = this.random.nextInt(40) + 180;
+            this.idleAnimationState.start(this.age);
         } else {
-            this.isGreeting = false;
+            this.idleAnimationCooldown--;
         }
     }
 

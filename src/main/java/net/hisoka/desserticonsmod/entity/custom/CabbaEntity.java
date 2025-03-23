@@ -75,6 +75,11 @@ public class CabbaEntity extends PathAwareEntity implements Merchant {
         this.dropItem(new ItemStack(ModItems.ENERGYDRINK, 1).getItem());
     }
 
+    @Override
+    protected int getXpToDrop() {
+        return 5 + this.getWorld().random.nextInt(3);
+    }
+
     private final TradeOfferList tradeOffers = new TradeOfferList();
     private PlayerEntity tradingPlayer;
 

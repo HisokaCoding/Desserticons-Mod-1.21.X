@@ -42,6 +42,10 @@ public class TimanEntity extends PathAwareEntity {
     private void dropItems() {
         this.dropItem(new ItemStack(ModItems.DESSERTICOIN, 1).getItem());
     }
+    @Override
+    protected int getXpToDrop() {
+        return 1 + this.getWorld().random.nextInt(3);
+    }
 
     protected SoundEvent getAmbientSound() {
         if (Random.create().nextInt(2) == 0) {

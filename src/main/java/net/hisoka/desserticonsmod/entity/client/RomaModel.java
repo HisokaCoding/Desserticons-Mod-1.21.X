@@ -115,6 +115,7 @@ public class RomaModel <T extends RomaEntity> extends SinglePartEntityModel<T>{
         this.setHeadAngles(netHeadYaw, headPitch);
 
         this.animateMovement(RomaAnimations.ROMA_WALK_ANIMATION, limbSwing, limbSwingAmount, 2f, 2.5f);
+        this.updateAnimation(entity.attackAnimationState, RomaAnimations.ROMA_ATTACK_ANIMATION, ageInTicks, 1f);
     }
 
     @Override

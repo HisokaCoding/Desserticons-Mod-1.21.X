@@ -9,6 +9,7 @@ import net.minecraft.entity.ai.goal.PowderSnowJumpGoal;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.ai.goal.WanderAroundFarGoal;
 import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.damage.DamageSources;
 import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -137,13 +138,18 @@ public class CabbaEntity extends PathAwareEntity implements Merchant {
     @Override
     public ActionResult interactMob(PlayerEntity player, Hand hand) {
         ItemStack itemStack = player.getStackInHand(hand);
-        if (!this.getWorld().isClient) {
-            if (this.getOffers().isEmpty()) {
-                return ActionResult.CONSUME;
+        if (!itemStack.isOf(ModItems.CRYPTOCOIN)) {
+            if (!this.getWorld().isClient) {
+                if (this.getOffers().isEmpty()) {
+                    return ActionResult.CONSUME;
+                }
+                player.sendMessage(Text.literal("Братан, есть в долг?"), false);
+                this.setCustomer(player);
+                this.sendOffers(player, this.getDisplayName(), 1);
             }
-            player.sendMessage(Text.literal("Братан, есть в долг?"), false);
-            this.setCustomer(player);
-            this.sendOffers(player, this.getDisplayName(), 1);
+        } else {
+            itemStack.decrementUnlessCreative(1, player);
+            this.kill();
         }
         return ActionResult.success(this.getWorld().isClient);
     }

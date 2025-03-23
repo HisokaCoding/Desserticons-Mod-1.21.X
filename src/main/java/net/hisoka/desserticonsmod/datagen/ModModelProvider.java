@@ -8,6 +8,7 @@ import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Model;
 import net.minecraft.data.client.Models;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.util.Identifier;
 
 import java.util.Optional;
@@ -28,6 +29,9 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CRYPTOCOIN, Models.GENERATED);
         itemModelGenerator.register(ModItems.CIGARETTES, Models.GENERATED);
         itemModelGenerator.register(ModItems.ENERGYDRINK, Models.GENERATED);
+
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.PREMIATA_BOOTS));
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.ADIDAS_LEGGINGS));
 
         itemModelGenerator.register(ModItems.CABBA_SPAWN_EGG,
                 new Model(Optional.of(Identifier.of("item/template_spawn_egg")),Optional.empty()));

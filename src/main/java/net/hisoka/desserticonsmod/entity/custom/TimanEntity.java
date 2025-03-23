@@ -4,6 +4,7 @@ package net.hisoka.desserticonsmod.entity.custom;
 import net.hisoka.desserticonsmod.item.ModItems;
 import net.hisoka.desserticonsmod.sound.ModSounds;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
@@ -16,6 +17,8 @@ import net.minecraft.entity.passive.WolfEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundEvent;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.Hand;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 
@@ -92,6 +95,21 @@ public class TimanEntity extends PathAwareEntity {
         public FleeGoal(TimanEntity timan, Class<T> fleeFromType, float distance, double slowSpeed, double fastSpeed) {
             super(timan, fleeFromType, distance, slowSpeed, fastSpeed);
             this.timan = timan;
+        }
+    }
+
+
+    @Override
+    protected ActionResult interactMob(PlayerEntity player, Hand hand) {
+        ItemStack itemStack = player.getStackInHand(hand);
+        if (!itemStack.isOf(ModItems.CRYPTOCOIN)) {
+            return ActionResult.PASS;
+        } else {
+            itemStack.decrementUnlessCreative(1, player);
+            ItemStack premiataBoots = new ItemStack(ModItems.PREMIATA_BOOTS);
+            ItemEntity itemEntity = new ItemEntity(this.getWorld(), this.getX(), this.getY(), this.getZ(), premiataBoots);
+            this.getWorld().spawnEntity(itemEntity);
+            return ActionResult.success(this.getWorld().isClient);
         }
     }
 }

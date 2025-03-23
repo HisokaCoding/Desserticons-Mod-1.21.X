@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.hisoka.desserticonsmod.item.ModItems;
 import net.hisoka.desserticonsmod.util.ModTags;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.ItemTags;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
@@ -20,5 +21,9 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.DESSERTICOIN)
                 .add(ModItems.CIGARETTES)
                 .add(ModItems.ENERGYDRINK);
+
+        getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModItems.PREMIATA_BOOTS)
+                .add(ModItems.ADIDAS_LEGGINGS);
     }
 }

@@ -21,6 +21,8 @@ public class ModItemGroups {
                         entries.add(ModItems.CRYPTOCOIN);
                         entries.add(ModItems.CIGARETTES);
                         entries.add(ModItems.ENERGYDRINK);
+                        entries.add(ModItems.PREMIATA_BOOTS);
+                        entries.add(ModItems.ADIDAS_LEGGINGS);
                         entries.add(ModBlocks.DESSERTICOIN_BLOCK);
                         entries.add(ModItems.CABBA_SPAWN_EGG);
                         entries.add(ModItems.TIMAN_SPAWN_EGG);

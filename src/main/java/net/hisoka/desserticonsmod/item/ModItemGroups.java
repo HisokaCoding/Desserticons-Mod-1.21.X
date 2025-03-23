@@ -18,6 +18,7 @@ public class ModItemGroups {
                     .displayName(Text.translatable("itemgroup.desserticonsmod.desserticons_items"))
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.DESSERTICOIN);
+                        entries.add(ModItems.CRYPTOCOIN);
                         entries.add(ModItems.CIGARETTES);
                         entries.add(ModItems.ENERGYDRINK);
                         entries.add(ModBlocks.DESSERTICOIN_BLOCK);

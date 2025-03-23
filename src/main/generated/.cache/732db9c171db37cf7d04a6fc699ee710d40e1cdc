@@ -1,10 +1,11 @@
-// 1.21	2025-03-23T05:56:21.5230323	Desserticons Mod/Model Definitions
+// 1.21	2025-03-24T00:30:11.9216737	Desserticons Mod/Model Definitions
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets\desserticonsmod\models\item\cabba_spawn_egg.json
 4094c8a31e8eaca7fbcfa6b878eb8bf23e01413d assets\desserticonsmod\models\block\desserticoin_block.json
-6a73a607b919e7ac8252482bffa7333c275f9a64 assets\desserticonsmod\models\item\cigarettes.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets\desserticonsmod\models\item\roma_spawn_egg.json
+6a73a607b919e7ac8252482bffa7333c275f9a64 assets\desserticonsmod\models\item\cigarettes.json
 71b928bb96c7899eada04411bd9d82485898b980 assets\desserticonsmod\models\item\energydrink.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets\desserticonsmod\models\item\timan_spawn_egg.json
+7df7a3a5f8edc90443cdee49dfe1b64c346d70ed assets\desserticonsmod\models\item\cryptocoin.json
 5ba0573168c56185024850bf29f8e78b243887cd assets\desserticonsmod\models\item\desserticoin.json
 4c858913649ca4639c8c77ce3918e8d1444c3968 assets\desserticonsmod\blockstates\desserticoin_block.json
 f9025d7c1108d72e25c180b5a4ecf147bc87a549 assets\desserticonsmod\models\item\desserticoin_block.json

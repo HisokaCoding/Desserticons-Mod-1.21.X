@@ -1,6 +1,7 @@
 package net.hisoka.desserticonsmod.entity.custom;
 
 import net.hisoka.desserticonsmod.block.ModBlocks;
+import net.hisoka.desserticonsmod.item.ModItems;
 import net.hisoka.desserticonsmod.sound.ModSounds;
 import net.minecraft.entity.AnimationState;
 import net.minecraft.entity.Entity;
@@ -38,8 +39,7 @@ public class RomaEntity extends IronGolemEntity {
         }
     }
     private void dropItems() {
-        this.dropItem(new ItemStack(ModBlocks.DESSERTICOIN_BLOCK, 1).getItem());
-        this.dropItem(new ItemStack(ModBlocks.DESSERTICOIN_BLOCK, 1).getItem());
+        this.dropItem(new ItemStack(ModItems.CRYPTOCOIN, 1).getItem());
     }
     @Override
     protected int getXpToDrop() {

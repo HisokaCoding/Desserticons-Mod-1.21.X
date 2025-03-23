@@ -1,6 +1,7 @@
 package net.hisoka.desserticonsmod.entity.custom;
 
 import net.hisoka.desserticonsmod.block.ModBlocks;
+import net.hisoka.desserticonsmod.sound.ModSounds;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
@@ -10,6 +11,8 @@ import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.sound.SoundEvent;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 
 public class RomaEntity extends PathAwareEntity {
@@ -37,17 +40,26 @@ public class RomaEntity extends PathAwareEntity {
         this.dropItem(new ItemStack(ModBlocks.DESSERTICOIN_BLOCK, 1).getItem());
     }
 
-//    protected SoundEvent getAmbientSound() {
-//        return ModSounds.ROMA_AMBIENT;
-//    }
-//
-//    @Override
-//    protected SoundEvent getDeathSound() {
-//        return ModSounds.ROMA_DEATH;
-//    }
-//
-//    @Override
-//    protected SoundEvent getHurtSound(DamageSource source) {return ModSounds.ROMA_HURT;}
+    protected SoundEvent getAmbientSound() {
+        // Вероятность проигрывания звука, например 1 из 10
+        if (Random.create().nextInt(4) == 0) {  // 0 - это означает, что звук будет проигрываться 1 раз из 10
+            return ModSounds.ROMA_AMBIENT;
+        }
+        return null;  // Если условие не выполнено, звук не будет проигрываться
+    }
+
+    @Override
+    protected SoundEvent getDeathSound() {
+        return ModSounds.ROMA_DEATH;
+    }
+
+    @Override
+    protected SoundEvent getHurtSound(DamageSource source) {
+        if (Random.create().nextInt(2) == 0) {
+            return ModSounds.ROMA_HURT;
+        }
+        return null;
+    }
 
     @Override
     protected void initGoals() {

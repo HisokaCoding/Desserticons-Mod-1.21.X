@@ -16,5 +16,24 @@
     "sounds": [
       "desserticonsmod:timan_death"
     ]
+  },
+
+  "roma_ambient": {
+    "subtitle": "sounds.desserticonsmod.roma_ambient",
+    "sounds": [
+      "desserticonsmod:roma_ambient"
+    ]
+  },
+  "roma_hurt": {
+    "subtitle": "sounds.desserticonsmod.roma_hurt",
+    "sounds": [
+      "desserticonsmod:roma_hurt"
+    ]
+  },
+  "roma_death": {
+    "subtitle": "sounds.desserticonsmod.roma_death",
+    "sounds": [
+      "desserticonsmod:roma_death"
+    ]
   }
 }

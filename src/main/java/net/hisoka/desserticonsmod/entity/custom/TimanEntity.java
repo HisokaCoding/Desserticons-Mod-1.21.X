@@ -16,7 +16,7 @@ import net.minecraft.entity.passive.WolfEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundEvent;
-import net.minecraft.sound.SoundEvents;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 
 public class TimanEntity extends PathAwareEntity {
@@ -44,7 +44,10 @@ public class TimanEntity extends PathAwareEntity {
     }
 
     protected SoundEvent getAmbientSound() {
-        return ModSounds.TIMAN_AMBIENT;
+        if (Random.create().nextInt(2) == 0) {
+            return ModSounds.TIMAN_AMBIENT;
+        }
+        return null;
     }
 
     @Override

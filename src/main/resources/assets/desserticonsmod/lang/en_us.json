@@ -4,11 +4,13 @@
   "item.desserticonsmod.energydrink": "Energy drink",
   "item.desserticonsmod.cabba_spawn_egg": "Cabba Spawn Egg",
   "item.desserticonsmod.timan_spawn_egg": "Timan Spawn Egg",
+  "item.desserticonsmod.roma_spawn_egg": "Roma Spawn Egg",
 
   "block.desserticonsmod.desserticoin_block": "Block of Desserticoins",
 
   "itemgroup.desserticonsmod.desserticons_items": "Desserticons Items",
 
   "entity.desserticonsmod.cabba": "Cabba",
-  "entity.desserticonsmod.cabba": "Timan"
+  "entity.desserticonsmod.cabba": "Timan",
+  "entity.desserticonsmod.cabba": "Roma"
 }

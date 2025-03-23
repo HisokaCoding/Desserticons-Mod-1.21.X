@@ -4,10 +4,7 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.hisoka.desserticonsmod.entity.ModEntities;
-import net.hisoka.desserticonsmod.entity.client.CabbaModel;
-import net.hisoka.desserticonsmod.entity.client.CabbaRenderer;
-import net.hisoka.desserticonsmod.entity.client.TimanModel;
-import net.hisoka.desserticonsmod.entity.client.TimanRenderer;
+import net.hisoka.desserticonsmod.entity.client.*;
 
 
 public class DesserticonsModClient implements ClientModInitializer {
@@ -19,5 +16,8 @@ public class DesserticonsModClient implements ClientModInitializer {
 
         EntityModelLayerRegistry.registerModelLayer(TimanModel.TIMAN, TimanModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.TIMAN, TimanRenderer::new);
+
+        EntityModelLayerRegistry.registerModelLayer(RomaModel.ROMA, RomaModel::getTexturedModelData);
+        EntityRendererRegistry.register(ModEntities.ROMA, RomaRenderer::new);
     }
 }

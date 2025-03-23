@@ -6,7 +6,9 @@ import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRe
 import net.hisoka.desserticonsmod.block.ModBlocks;
 import net.hisoka.desserticonsmod.entity.ModEntities;
 import net.hisoka.desserticonsmod.entity.custom.CabbaEntity;
+import net.hisoka.desserticonsmod.entity.custom.RomaEntity;
 import net.hisoka.desserticonsmod.entity.custom.TimanEntity;
+import net.hisoka.desserticonsmod.event.ModEvents;
 import net.hisoka.desserticonsmod.item.ModItemGroups;
 import net.hisoka.desserticonsmod.item.ModItems;
 import net.hisoka.desserticonsmod.sound.ModSounds;
@@ -26,8 +28,10 @@ public class DesserticonsMod implements ModInitializer {
 		ModEntities.registerModEntities();
 		ModEntitySpawns.addSpawn();
 		ModSounds.registerSounds();
+		ModEvents.register();
 
 		FabricDefaultAttributeRegistry.register(ModEntities.CABBA, CabbaEntity.createMobAttributes());
-		FabricDefaultAttributeRegistry.register(ModEntities.TIMAN, TimanEntity.createMobAttributes());
+		FabricDefaultAttributeRegistry.register(ModEntities.TIMAN, TimanEntity.createTimanAttributes());
+		FabricDefaultAttributeRegistry.register(ModEntities.ROMA, RomaEntity.createRomaAttributes());
 	}
 }

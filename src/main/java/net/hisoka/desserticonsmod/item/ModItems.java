@@ -17,6 +17,8 @@ public class ModItems {
             new SpawnEggItem(ModEntities.CABBA, 0xE0E0E0, 0x808080, new Item.Settings()));
     public static final Item TIMAN_SPAWN_EGG = registerItem("timan_spawn_egg",
             new SpawnEggItem(ModEntities.TIMAN, 0x66FFFF, 0x663300, new Item.Settings()));
+    public static final Item ROMA_SPAWN_EGG = registerItem("roma_spawn_egg",
+            new SpawnEggItem(ModEntities.ROMA, 0xCC0000, 0xFF8000, new Item.Settings()));
 
 
     private static Item registerItem(String name, Item item){

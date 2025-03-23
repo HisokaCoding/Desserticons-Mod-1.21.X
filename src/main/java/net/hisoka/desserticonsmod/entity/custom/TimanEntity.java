@@ -6,8 +6,11 @@ import net.hisoka.desserticonsmod.sound.ModSounds;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.goal.*;
+import net.minecraft.entity.attribute.DefaultAttributeContainer;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.HostileEntity;
+import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.entity.passive.WolfEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -62,6 +65,13 @@ public class TimanEntity extends PathAwareEntity {
         this.goalSelector.add(6, new WanderAroundFarGoal(this, 0.6));
         this.goalSelector.add(11, new LookAtEntityGoal(this, PlayerEntity.class, 10.0F));
     }
+
+    public static DefaultAttributeContainer.Builder createTimanAttributes() {
+        return MobEntity.createMobAttributes()
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 3.0)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3F);
+    }
+
     static class EscapeDangerGoal extends net.minecraft.entity.ai.goal.EscapeDangerGoal {
         private final TimanEntity timan;
 

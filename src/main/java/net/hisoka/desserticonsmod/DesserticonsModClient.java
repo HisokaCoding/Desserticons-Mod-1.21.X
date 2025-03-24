@@ -19,5 +19,8 @@ public class DesserticonsModClient implements ClientModInitializer {
 
         EntityModelLayerRegistry.registerModelLayer(RomaModel.ROMA, RomaModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.ROMA, RomaRenderer::new);
+
+        EntityModelLayerRegistry.registerModelLayer(ArkawaModel.ARKAWA, ArkawaModel::getTexturedModelData);
+        EntityRendererRegistry.register(ModEntities.ARKAWA, ArkawaRenderer::new);
     }
 }

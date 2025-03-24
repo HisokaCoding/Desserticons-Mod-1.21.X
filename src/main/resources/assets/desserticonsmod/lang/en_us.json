@@ -9,6 +9,7 @@
   "item.desserticonsmod.cabba_spawn_egg": "Cabba Spawn Egg",
   "item.desserticonsmod.timan_spawn_egg": "Timan Spawn Egg",
   "item.desserticonsmod.roma_spawn_egg": "Roma Spawn Egg",
+  "item.desserticonsmod.arkawa_spawn_egg": "Arkawa Spawn Egg",
 
   "block.desserticonsmod.desserticoin_block": "Block of Desserticoins",
 
@@ -16,5 +17,6 @@
 
   "entity.desserticonsmod.cabba": "Cabba",
   "entity.desserticonsmod.timan": "Timan",
-  "entity.desserticonsmod.roma": "Roma"
+  "entity.desserticonsmod.roma": "Roma",
+  "entity.desserticonsmod.arkawa": "Arkawa"
 }

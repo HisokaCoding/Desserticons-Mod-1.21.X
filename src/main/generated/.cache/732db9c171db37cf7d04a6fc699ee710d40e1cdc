@@ -1,4 +1,4 @@
-// 1.21	2025-03-24T20:52:33.8196268	Desserticons Mod/Model Definitions
+// 1.21	2025-03-25T00:24:32.4973957	Desserticons Mod/Model Definitions
 019ccbf7353da0e07882ff4a73ff1f0ea2fe0b62 assets\desserticonsmod\models\item\adidas_leggings_copper_trim.json
 ebf0d9f1a19d26d6548b54cad93ae8a24cb49348 assets\desserticonsmod\models\item\adidas_leggings_diamond_trim.json
 419c0888019a61a57542bb009f3695ce63076498 assets\desserticonsmod\models\item\adidas_leggings_iron_trim.json
@@ -15,6 +15,7 @@ d6cad312adfc448d572de29612d948c19eb54ce8 assets\desserticonsmod\models\item\prem
 257ad1626437517f6f50d2242a64b60d8fe08116 assets\desserticonsmod\models\item\premiata_boots_diamond_trim.json
 4c858913649ca4639c8c77ce3918e8d1444c3968 assets\desserticonsmod\blockstates\desserticoin_block.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets\desserticonsmod\models\item\cabba_spawn_egg.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets\desserticonsmod\models\item\arkawa_spawn_egg.json
 6f845f4b43944f3699a2cc68fa4a6ac4f7d70b05 assets\desserticonsmod\models\item\premiata_boots_amethyst_trim.json
 4094c8a31e8eaca7fbcfa6b878eb8bf23e01413d assets\desserticonsmod\models\block\desserticoin_block.json
 f9960da5b2c97735a8211af6b394910edc48774b assets\desserticonsmod\models\item\premiata_boots_emerald_trim.json

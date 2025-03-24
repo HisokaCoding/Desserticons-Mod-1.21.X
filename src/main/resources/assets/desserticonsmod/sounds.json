@@ -18,22 +18,41 @@
     ]
   },
 
-  "roma_ambient": {
-    "subtitle": "sounds.desserticonsmod.roma_ambient",
+  "arkawa_ambient": {
+    "subtitle": "sounds.desserticonsmod.arkawa_ambient",
     "sounds": [
-      "desserticonsmod:roma_ambient"
+      "desserticonsmod:arkawa_ambient"
     ]
   },
-  "roma_hurt": {
-    "subtitle": "sounds.desserticonsmod.roma_hurt",
+  "arkawa_hurt": {
+    "subtitle": "sounds.desserticonsmod.arkawa_hurt",
     "sounds": [
-      "desserticonsmod:roma_hurt"
+      "desserticonsmod:arkawa_hurt"
     ]
   },
-  "roma_death": {
-    "subtitle": "sounds.desserticonsmod.roma_death",
+  "arkawa_death": {
+    "subtitle": "sounds.desserticonsmod.arkawa_death",
     "sounds": [
-      "desserticonsmod:roma_death"
+      "desserticonsmod:arkawa_death"
     ]
-  }
+  },
+
+    "roma_ambient": {
+      "subtitle": "sounds.desserticonsmod.roma_ambient",
+      "sounds": [
+        "desserticonsmod:roma_ambient"
+      ]
+    },
+    "roma_hurt": {
+      "subtitle": "sounds.desserticonsmod.roma_hurt",
+      "sounds": [
+        "desserticonsmod:roma_hurt"
+      ]
+    },
+    "roma_death": {
+      "subtitle": "sounds.desserticonsmod.roma_death",
+      "sounds": [
+        "desserticonsmod:roma_death"
+      ]
+    }
 }

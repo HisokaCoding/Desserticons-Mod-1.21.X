@@ -1,11 +1,9 @@
-// 1.21	2025-03-24T20:52:33.8236266	Desserticons Mod/Recipes
+// 1.21	2025-03-25T00:24:32.5023959	Desserticons Mod/Recipes
 a6d61ac54c422d4aa3c2e363bff4d77e8b9138f8 data\desserticonsmod\recipe\desserticoin_from_block.json
 bd32550b3802c1570cb2cc926e722dde3d7d4485 data\desserticonsmod\advancement\recipes\misc\basket_from_pumpkin.json
 a9d767efce092554a89b5282bfa8556545188d55 data\desserticonsmod\advancement\recipes\misc\desserticoin_block.json
 ee9cd9ea8d0831c7e9d36197684dece065845346 data\desserticonsmod\recipe\basket_from_pumpkin.json
 5df620e406a82ff16fc53ad22277417c3e9909d3 data\desserticonsmod\advancement\recipes\misc\desserticoin_from_block.json
-10536004aa6f8d2d3d971c2887e41e73d5c62780 data\desserticonsmod\advancement\recipes\misc\desserticoin_from_nuggets.json
-fe2499832829e11ed6d35a3f539534e28385070d data\desserticonsmod\recipe\desserticoin_from_nuggets.json
 1da9d03cfa31e1a6209c7cb7a39cc6e96888d60c data\desserticonsmod\recipe\desserticoin.json
 c94b668cb0a8ae567de2c0a882fe6fa802cbd1d9 data\desserticonsmod\advancement\recipes\building_blocks\desserticoin.json
 de0078715708e68a871b2149aee0ee33e20cb184 data\desserticonsmod\recipe\desserticoin_block.json

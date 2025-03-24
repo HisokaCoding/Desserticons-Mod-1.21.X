@@ -100,7 +100,7 @@ public class CabbaEntity extends PathAwareEntity implements Merchant {
 
     private void setupTrades() {
         tradeOffers.add(new TradeOffer(
-                new TradedItem(ModItems.DESSERTICOIN, 5),
+                new TradedItem(ModItems.DESSERTICOIN, 9),
                 new ItemStack(ModBlocks.DESSERTICOIN_BLOCK, 1),
                 10, 5, 0.05f));
         tradeOffers.add(new TradeOffer(

@@ -36,6 +36,12 @@
       "desserticonsmod:arkawa_death"
     ]
   },
+  "arkawa_basket": {
+    "subtitle": "sounds.desserticonsmod.arkawa_basket",
+    "sounds": [
+      "desserticonsmod:arkawa_basket"
+    ]
+  },
 
     "roma_ambient": {
       "subtitle": "sounds.desserticonsmod.roma_ambient",

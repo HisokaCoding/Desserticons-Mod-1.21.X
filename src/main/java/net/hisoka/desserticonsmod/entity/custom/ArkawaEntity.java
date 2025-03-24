@@ -4,6 +4,7 @@ import net.hisoka.desserticonsmod.item.ModItems;
 import net.hisoka.desserticonsmod.sound.ModSounds;
 import net.minecraft.entity.AnimationState;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.ai.goal.LookAtEntityGoal;
 import net.minecraft.entity.ai.goal.PowderSnowJumpGoal;
 import net.minecraft.entity.ai.goal.SwimGoal;
@@ -114,16 +115,15 @@ public class ArkawaEntity extends PathAwareEntity {
             return ActionResult.PASS;
         } else {
             itemStack.decrementUnlessCreative(1, player);
+            ItemStack moscowHoodie = new ItemStack(ModItems.MOSCOW_HOODIE);
+            ItemEntity itemEntity = new ItemEntity(this.getWorld(), this.getX(), this.getY(), this.getZ(), moscowHoodie);
+            this.getWorld().spawnEntity(itemEntity);
             this.setSpecialAnimation(true);
             return ActionResult.success(this.getWorld().isClient);
         }
     }
 
 
-
-    public boolean isSpecialAnimation() {
-        return isBasketballing;
-    }
 
     public void setSpecialAnimation(boolean value) {
         if (value) {

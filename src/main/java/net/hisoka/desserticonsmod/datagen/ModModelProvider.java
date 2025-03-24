@@ -33,6 +33,8 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.PREMIATA_BOOTS));
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.ADIDAS_LEGGINGS));
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.MOSCOW_HOODIE));
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.Z_HELMET));
 
         itemModelGenerator.register(ModItems.CABBA_SPAWN_EGG,
                 new Model(Optional.of(Identifier.of("item/template_spawn_egg")),Optional.empty()));

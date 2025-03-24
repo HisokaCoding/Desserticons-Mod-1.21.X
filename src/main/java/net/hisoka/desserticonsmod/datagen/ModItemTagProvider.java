@@ -6,7 +6,6 @@ import net.hisoka.desserticonsmod.item.ModItems;
 import net.hisoka.desserticonsmod.util.ModTags;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -23,6 +22,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
                 .add(ModItems.PREMIATA_BOOTS)
+                .add(ModItems.Z_HELMET)
+                .add(ModItems.MOSCOW_HOODIE)
                 .add(ModItems.ADIDAS_LEGGINGS);
     }
 }

@@ -22,7 +22,13 @@ public class ModItems {
                     .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(50))));
     public static final Item ADIDAS_LEGGINGS = registerItem("adidas_leggings",
             new ArmorItem(ModArmorMaterials.DESSERTICONS_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings()
-                    .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(50))));
+                    .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(80))));
+    public static final Item MOSCOW_HOODIE = registerItem("moscow_hoodie",
+            new ArmorItem(ModArmorMaterials.DESSERTICONS_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(100))));
+    public static final Item Z_HELMET = registerItem("z_helmet",
+            new ArmorItem(ModArmorMaterials.DESSERTICONS_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(60))));
 
     public static final Item CABBA_SPAWN_EGG = registerItem("cabba_spawn_egg",
             new SpawnEggItem(ModEntities.CABBA, 0xE0E0E0, 0x808080, new Item.Settings()));

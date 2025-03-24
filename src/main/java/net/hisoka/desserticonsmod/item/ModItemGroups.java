@@ -19,6 +19,7 @@ public class ModItemGroups {
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.DESSERTICOIN);
                         entries.add(ModItems.CRYPTOCOIN);
+                        entries.add(ModItems.BASKET);
                         entries.add(ModItems.CIGARETTES);
                         entries.add(ModItems.ENERGYDRINK);
                         entries.add(ModItems.PREMIATA_BOOTS);

@@ -19,8 +19,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(ModTags.Items.VALUEABLE_ITEMS)
                 .add(ModItems.DESSERTICOIN)
-                .add(ModItems.CIGARETTES)
-                .add(ModItems.ENERGYDRINK);
+                .add(ModItems.CRYPTOCOIN);
 
         getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
                 .add(ModItems.PREMIATA_BOOTS)

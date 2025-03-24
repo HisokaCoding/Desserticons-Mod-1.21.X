@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.hisoka.desserticonsmod.DesserticonsMod;
 import net.hisoka.desserticonsmod.block.ModBlocks;
 import net.hisoka.desserticonsmod.item.ModItems;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
@@ -36,5 +37,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(ModBlocks.DESSERTICOIN_BLOCK)
                 .criterion(hasItem(ModBlocks.DESSERTICOIN_BLOCK),conditionsFromItem(ModBlocks.DESSERTICOIN_BLOCK))
                 .offerTo(recipeExporter, Identifier.of(DesserticonsMod.MOD_ID, "desserticoin_from_block"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BASKET, 1)
+                .input(Items.SLIME_BALL)
+                .input(Blocks.PUMPKIN)
+                .criterion(hasItem(Blocks.PUMPKIN),conditionsFromItem(Blocks.PUMPKIN))
+                .offerTo(recipeExporter, Identifier.of(DesserticonsMod.MOD_ID, "basket_from_pumpkin"));
     }
 }

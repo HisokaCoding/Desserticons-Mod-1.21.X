@@ -13,6 +13,7 @@ public class ModItems {
 
     public static final Item DESSERTICOIN = registerItem("desserticoin", new Item(new Item.Settings()));
     public static final Item CRYPTOCOIN = registerItem("cryptocoin", new Item(new Item.Settings()));
+    public static final Item BASKET = registerItem("basket", new Item(new Item.Settings()));
     public static final Item CIGARETTES = registerItem("cigarettes", new Item(new Item.Settings().food(ModFoodComponents.CIGARETTES)));
     public static final Item ENERGYDRINK = registerItem("energydrink", new Item(new Item.Settings().food(ModFoodComponents.ENERGYDRINK)));
 

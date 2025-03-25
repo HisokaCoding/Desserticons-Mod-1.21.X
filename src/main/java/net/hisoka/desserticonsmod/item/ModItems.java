@@ -43,6 +43,8 @@ public class ModItems {
             new SpawnEggItem(ModEntities.ROMA, 0xCC0000, 0xFF8000, new Item.Settings()));
     public static final Item ARKAWA_SPAWN_EGG = registerItem("arkawa_spawn_egg",
             new SpawnEggItem(ModEntities.ARKAWA, 0xFF3333, 0xFFFF00, new Item.Settings()));
+    public static final Item JORA_SPAWN_EGG = registerItem("jora_spawn_egg",
+            new SpawnEggItem(ModEntities.JORA, 0x663300, 0xFFCCCC, new Item.Settings()));
 
 
     private static Item registerItem(String name, Item item){

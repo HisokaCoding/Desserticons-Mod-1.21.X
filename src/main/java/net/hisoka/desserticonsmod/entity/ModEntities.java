@@ -1,10 +1,7 @@
 package net.hisoka.desserticonsmod.entity;
 
 import net.hisoka.desserticonsmod.DesserticonsMod;
-import net.hisoka.desserticonsmod.entity.custom.ArkawaEntity;
-import net.hisoka.desserticonsmod.entity.custom.CabbaEntity;
-import net.hisoka.desserticonsmod.entity.custom.RomaEntity;
-import net.hisoka.desserticonsmod.entity.custom.TimanEntity;
+import net.hisoka.desserticonsmod.entity.custom.*;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.registry.Registries;
@@ -32,6 +29,11 @@ public class ModEntities {
             Identifier.of(DesserticonsMod.MOD_ID,"arkawa"),
             EntityType.Builder.create(ArkawaEntity::new, SpawnGroup.CREATURE)
                     .dimensions(1f, 2f).build());
+
+    public static final EntityType<JoraEntity> JORA = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(DesserticonsMod.MOD_ID,"jora"),
+            EntityType.Builder.create(JoraEntity::new, SpawnGroup.CREATURE)
+                    .dimensions(2f, 2f).build());
 
     public static void registerModEntities(){
         DesserticonsMod.LOGGER.info("Registering Mod Entities for " + DesserticonsMod.MOD_ID);

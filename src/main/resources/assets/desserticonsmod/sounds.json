@@ -60,5 +60,24 @@
       "sounds": [
         "desserticonsmod:roma_death"
       ]
-    }
+    },
+
+  "jora_ambient": {
+    "subtitle": "sounds.desserticonsmod.jora_ambient",
+    "sounds": [
+      "desserticonsmod:jora_ambient"
+    ]
+  },
+  "jora_hurt": {
+    "subtitle": "sounds.desserticonsmod.jora_hurt",
+    "sounds": [
+      "desserticonsmod:jora_hurt"
+    ]
+  },
+  "jora_death": {
+    "subtitle": "sounds.desserticonsmod.jora_death",
+    "sounds": [
+      "desserticonsmod:jora_death"
+    ]
+  }
 }

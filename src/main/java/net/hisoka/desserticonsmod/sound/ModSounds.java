@@ -21,6 +21,10 @@ public class ModSounds {
     public static SoundEvent ARKAWA_AMBIENT = registerSoundEvent("arkawa_ambient");
     public static SoundEvent ARKAWA_BASKET = registerSoundEvent("arkawa_basket");
 
+    public static SoundEvent JORA_HURT = registerSoundEvent("jora_hurt");
+    public static SoundEvent JORA_DEATH = registerSoundEvent("jora_death");
+    public static SoundEvent JORA_AMBIENT = registerSoundEvent("jora_ambient");
+
     private static SoundEvent registerSoundEvent(String name){
         Identifier id = Identifier.of(DesserticonsMod.MOD_ID, name);
         return Registry.register(Registries.SOUND_EVENT, id, SoundEvent.of(id));

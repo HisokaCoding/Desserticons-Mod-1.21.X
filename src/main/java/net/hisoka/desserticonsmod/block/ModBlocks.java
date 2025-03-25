@@ -18,16 +18,6 @@ public class ModBlocks {
             new Block(AbstractBlock.Settings.create().strength(4f)
                     .requiresTool().sounds(BlockSoundGroup.METAL)));
 
-    public static final Block CUSTOM_PORTAL_BLOCK = registerBlock("custom_portal_block",
-            new CustomPortalBlock(AbstractBlock.Settings.create()
-                    .noCollision()
-                    .strength(0.0F)));
-
-    public static void registerRenderLayer() {
-        BlockRenderLayerMap.INSTANCE.putBlock(CUSTOM_PORTAL_BLOCK, RenderLayer.getTranslucent());
-    }
-
-
 
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);

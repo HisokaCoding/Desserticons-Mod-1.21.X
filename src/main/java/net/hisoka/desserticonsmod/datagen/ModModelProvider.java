@@ -21,7 +21,6 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DESSERTICOIN_BLOCK);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CUSTOM_PORTAL_BLOCK);
     }
 
     @Override

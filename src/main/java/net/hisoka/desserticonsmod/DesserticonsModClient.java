@@ -12,7 +12,6 @@ public class DesserticonsModClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
 
-        ModBlocks.registerRenderLayer();
 
         EntityModelLayerRegistry.registerModelLayer(CabbaModel.CABBA, CabbaModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.CABBA, CabbaRenderer::new);

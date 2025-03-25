@@ -20,7 +20,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     public ModRecipeProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
         super(output, registriesFuture);
     }
-
+//
     @Override
     public void generate(RecipeExporter recipeExporter) {
 

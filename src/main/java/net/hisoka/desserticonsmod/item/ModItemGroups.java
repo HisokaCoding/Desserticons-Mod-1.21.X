@@ -21,6 +21,7 @@ public class ModItemGroups {
                         entries.add(ModItems.CRYPTOCOIN);
                         entries.add(ModItems.BASKET);
                         entries.add(ModItems.CIGARETTES);
+                        entries.add(ModItems.HOOKAH);
                         entries.add(ModItems.ENERGYDRINK);
                         entries.add(ModItems.PREMIATA_BOOTS);
                         entries.add(ModItems.ADIDAS_LEGGINGS);

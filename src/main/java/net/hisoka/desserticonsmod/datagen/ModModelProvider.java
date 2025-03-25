@@ -30,6 +30,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CIGARETTES, Models.GENERATED);
         itemModelGenerator.register(ModItems.ENERGYDRINK, Models.GENERATED);
         itemModelGenerator.register(ModItems.BASKET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.HOOKAH, Models.GENERATED);
 
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.PREMIATA_BOOTS));
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.ADIDAS_LEGGINGS));

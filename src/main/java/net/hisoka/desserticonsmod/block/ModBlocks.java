@@ -1,8 +1,10 @@
 package net.hisoka.desserticonsmod.block;
 
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.hisoka.desserticonsmod.DesserticonsMod;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.client.render.RenderLayer;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -15,6 +17,17 @@ public class ModBlocks {
     public static final Block DESSERTICOIN_BLOCK = registerBlock("desserticoin_block",
             new Block(AbstractBlock.Settings.create().strength(4f)
                     .requiresTool().sounds(BlockSoundGroup.METAL)));
+
+    public static final Block CUSTOM_PORTAL_BLOCK = registerBlock("custom_portal_block",
+            new CustomPortalBlock(AbstractBlock.Settings.create()
+                    .noCollision()
+                    .strength(0.0F)));
+
+    public static void registerRenderLayer() {
+        BlockRenderLayerMap.INSTANCE.putBlock(CUSTOM_PORTAL_BLOCK, RenderLayer.getTranslucent());
+    }
+
+
 
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);

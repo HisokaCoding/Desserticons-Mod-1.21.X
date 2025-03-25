@@ -3,6 +3,7 @@ package net.hisoka.desserticonsmod;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
+import net.hisoka.desserticonsmod.block.ModBlocks;
 import net.hisoka.desserticonsmod.entity.ModEntities;
 import net.hisoka.desserticonsmod.entity.client.*;
 
@@ -10,6 +11,8 @@ import net.hisoka.desserticonsmod.entity.client.*;
 public class DesserticonsModClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
+
+        ModBlocks.registerRenderLayer();
 
         EntityModelLayerRegistry.registerModelLayer(CabbaModel.CABBA, CabbaModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.CABBA, CabbaRenderer::new);

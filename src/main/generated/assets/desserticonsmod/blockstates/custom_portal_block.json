@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "desserticonsmod:block/custom_portal_block"
+    }
+  }
+}

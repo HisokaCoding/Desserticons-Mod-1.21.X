@@ -1,19 +1,34 @@
 package net.hisoka.desserticonsmod.block;
 
+import net.hisoka.desserticonsmod.DesserticonsMod;
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.state.property.EnumProperty;
+import net.minecraft.state.property.Properties;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.*;
+import net.minecraft.world.border.WorldBorder;
+import net.minecraft.world.dimension.DimensionType;
+import net.minecraft.world.dimension.DimensionTypes;
+import net.minecraft.world.dimension.NetherPortal;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.Optional;
 
 
 public class CustomPortalBlock extends Block implements Portal {
@@ -103,8 +118,8 @@ public class CustomPortalBlock extends Block implements Portal {
 
 
     @Override
-    public Portal.Effect getPortalEffect() {
-        return Portal.Effect.CONFUSION;
+    public Effect getPortalEffect() {
+        return Effect.CONFUSION;
     }
 
 
@@ -153,8 +168,32 @@ public class CustomPortalBlock extends Block implements Portal {
 
 
 
+
     @Override
     public @Nullable TeleportTarget createTeleportTarget(ServerWorld world, Entity entity, BlockPos pos) {
-        return null;
+        // Получаем сервер, на котором работает текущий мир
+        MinecraftServer server = world.getServer();
+
+        // Создаем RegistryKey для вашего мира
+        RegistryKey<World> targetWorldKey = RegistryKey.of(World.OVERWORLD.getRegistryRef(), Identifier.of(DesserticonsMod.MOD_ID, "ahineya"));
+
+        // Получаем мир по RegistryKey
+        ServerWorld targetWorld = server.getWorld(targetWorldKey);
+        // Задаем позицию телепортации, например, на координатах (0, 64, 0) в целевом мире
+        BlockPos targetPos = new BlockPos(0, 64, 0);
+        Vec3d targetVec = Vec3d.ofCenter(targetPos);  // Координаты для телепортации
+        Vec3d velocity = Vec3d.ZERO;  // Скорость/направление телепортации
+        float yaw = entity.getYaw();  // Поворот по оси Y
+        float pitch = entity.getPitch();  // Поворот по оси X
+
+        if (targetWorld == null) {
+            // Если мир не найден, выводим ошибку или возвращаем null
+            return null;
+        }
+
+        TeleportTarget.PostDimensionTransition postDimensionTransition;
+        postDimensionTransition = TeleportTarget.SEND_TRAVEL_THROUGH_PORTAL_PACKET.then(TeleportTarget.ADD_PORTAL_CHUNK_TICKET);
+
+        return new TeleportTarget(targetWorld, targetVec, velocity, yaw, pitch, postDimensionTransition);
     }
 }

@@ -1,6 +1,7 @@
 package net.hisoka.desserticonsmod.block;
 
 import net.hisoka.desserticonsmod.DesserticonsMod;
+import net.hisoka.desserticonsmod.util.CustomTeleporter;
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityDimensions;
@@ -170,30 +171,29 @@ public class CustomPortalBlock extends Block implements Portal {
 
 
     @Override
-    public @Nullable TeleportTarget createTeleportTarget(ServerWorld world, Entity entity, BlockPos pos) {
-        // Получаем сервер, на котором работает текущий мир
-        MinecraftServer server = world.getServer();
-
-        // Создаем RegistryKey для вашего мира
-        RegistryKey<World> targetWorldKey = RegistryKey.of(World.OVERWORLD.getRegistryRef(), Identifier.of(DesserticonsMod.MOD_ID, "ahineya"));
-
-        // Получаем мир по RegistryKey
-        ServerWorld targetWorld = server.getWorld(targetWorldKey);
-        // Задаем позицию телепортации, например, на координатах (0, 64, 0) в целевом мире
-        BlockPos targetPos = new BlockPos(0, 64, 0);
-        Vec3d targetVec = Vec3d.ofCenter(targetPos);  // Координаты для телепортации
-        Vec3d velocity = Vec3d.ZERO;  // Скорость/направление телепортации
-        float yaw = entity.getYaw();  // Поворот по оси Y
-        float pitch = entity.getPitch();  // Поворот по оси X
-
-        if (targetWorld == null) {
-            // Если мир не найден, выводим ошибку или возвращаем null
-            return null;
+    public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
+        if (world.isClient || entity.hasVehicle() || entity.hasPassengers() || !entity.canUsePortals(true)) {
+            return;
         }
 
-        TeleportTarget.PostDimensionTransition postDimensionTransition;
-        postDimensionTransition = TeleportTarget.SEND_TRAVEL_THROUGH_PORTAL_PACKET.then(TeleportTarget.ADD_PORTAL_CHUNK_TICKET);
+        MinecraftServer server = world.getServer();
+        if (server == null) return;
 
-        return new TeleportTarget(targetWorld, targetVec, velocity, yaw, pitch, postDimensionTransition);
+        // Получаем мир Ада (Nether)
+        ServerWorld netherWorld = server.getWorld(World.NETHER);
+        if (netherWorld == null) return;
+
+        // Координаты, куда отправить игрока в Nether
+        BlockPos targetPos = new BlockPos(0, 130, 0);
+
+        // Телепортируем игрока
+        CustomTeleporter.teleportEntity(entity, netherWorld, targetPos);
+    }
+
+
+
+    @Override
+    public @Nullable TeleportTarget createTeleportTarget(ServerWorld world, Entity entity, BlockPos pos) {
+        return null;
     }
 }

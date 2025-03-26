@@ -11,6 +11,10 @@ import net.hisoka.desserticonsmod.item.ModItemGroups;
 import net.hisoka.desserticonsmod.item.ModItems;
 import net.hisoka.desserticonsmod.sound.ModSounds;
 import net.hisoka.desserticonsmod.world.gen.ModEntitySpawns;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.util.Identifier;
+import net.minecraft.world.gen.structure.Structure;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

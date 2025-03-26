@@ -1,35 +1,31 @@
 package net.hisoka.desserticonsmod.block;
 
+import com.mojang.datafixers.util.Pair;
 import net.hisoka.desserticonsmod.DesserticonsMod;
 import net.hisoka.desserticonsmod.util.CustomTeleporter;
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.registry.entry.RegistryEntryList;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.state.property.EnumProperty;
-import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
-import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.*;
-import net.minecraft.world.border.WorldBorder;
-import net.minecraft.world.dimension.DimensionType;
-import net.minecraft.world.dimension.DimensionTypes;
-import net.minecraft.world.dimension.NetherPortal;
+import net.minecraft.world.gen.chunk.ChunkGenerator;
+import net.minecraft.world.gen.structure.Structure;
 import org.jetbrains.annotations.Nullable;
-
-import java.util.Optional;
 
 
 public class CustomPortalBlock extends Block implements Portal {
@@ -45,12 +41,11 @@ public class CustomPortalBlock extends Block implements Portal {
 
     @Override
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
-        if (neighborState.isOf(Blocks.AIR)){
+        if (neighborState.isOf(Blocks.AIR)) {
             destroyPortal((World) world, pos);
         }
         return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
     }
-
 
 
     public boolean isValidPortalFrame(World world, BlockPos pos) {
@@ -61,10 +56,7 @@ public class CustomPortalBlock extends Block implements Portal {
         if (frameStartX != null && checkFrame(world, frameStartX, Direction.EAST)) {
             return true;
         }
-        if (frameStartZ != null && checkFrame(world, frameStartZ, Direction.SOUTH)) {
-            return true;
-        }
-        return false;
+        return frameStartZ != null && checkFrame(world, frameStartZ, Direction.SOUTH);
     }
 
     public BlockPos findFrameCorner(World world, BlockPos pos, Direction direction) {
@@ -81,6 +73,7 @@ public class CustomPortalBlock extends Block implements Portal {
         }
         return null;
     }
+
 
     private boolean checkFrame(World world, BlockPos frameStart, Direction direction) {
         int dx = direction == Direction.EAST ? 1 : 0;
@@ -117,12 +110,10 @@ public class CustomPortalBlock extends Block implements Portal {
     }
 
 
-
     @Override
     public Effect getPortalEffect() {
         return Effect.CONFUSION;
     }
-
 
 
     @Override
@@ -135,7 +126,6 @@ public class CustomPortalBlock extends Block implements Portal {
         )
                 : 0;
     }
-
 
 
     @Override
@@ -159,15 +149,10 @@ public class CustomPortalBlock extends Block implements Portal {
     }
 
 
-
     private void destroyPortal(World world, BlockPos pos) {
         // Удаление блока портала (заменяем на воздух)
         world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-        }
-
-
-
-
+    }
 
 
     @Override
@@ -179,17 +164,42 @@ public class CustomPortalBlock extends Block implements Portal {
         MinecraftServer server = world.getServer();
         if (server == null) return;
 
-        // Получаем мир Ада (Nether)
+        // Получаем миры
+        RegistryKey<World> dimensionKey = world.getRegistryKey();
         ServerWorld netherWorld = server.getWorld(World.NETHER);
-        if (netherWorld == null) return;
 
-        // Координаты, куда отправить игрока в Nether
-        BlockPos targetPos = new BlockPos(0, 130, 0);
+        BlockPos targetPos = new BlockPos(0, 0, 0);
 
-        // Телепортируем игрока
-        CustomTeleporter.teleportEntity(entity, netherWorld, targetPos);
+        // Ищем блок бамбука внутри структуры
+        System.out.println(targetPos);
+        targetPos = findBlockInStructure(netherWorld, targetPos);
+        System.out.println(targetPos);
+        if (targetPos != null) {
+            targetPos = new BlockPos(targetPos.getX(), targetPos.getY() + 2, targetPos.getZ());
+        }
+
+        if (!dimensionKey.equals(World.NETHER)) {
+            CustomTeleporter.teleportEntity(entity, netherWorld, targetPos);
+        }
     }
 
+
+    /**
+     * Метод ищет определённый блок внутри найденной структуры
+     */
+    private BlockPos findBlockInStructure(ServerWorld world, BlockPos center) {
+        for (int x = -200; x <= 200; x++) {
+            for (int y = -200; y <= 200; y++) {
+                for (int z = -200; z <= 200; z++) {
+                    BlockPos checkPos = center.add(x, y, z);
+                    if (world.getBlockState(checkPos).isOf(Blocks.BAMBOO_BLOCK)) {
+                        return checkPos; // Найден блок бамбука
+                    }
+                }
+            }
+        }
+        return null; // Если блок не найден
+    }
 
 
     @Override

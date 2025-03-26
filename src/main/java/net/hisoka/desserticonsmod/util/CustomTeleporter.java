@@ -18,7 +18,6 @@ public class CustomTeleporter {
         Vec3d finalPos = new Vec3d(targetPos.getX() + 0.5, targetPos.getY() + 0.5, targetPos.getZ() + 0.5);
 
         Set<PositionFlag> s = new HashSet<>();
-        //s.add();
         entity.teleport(destinationWorld, finalPos.x, finalPos.y, finalPos.z, s, entity.getYaw(), entity.getPitch());
     }
 }

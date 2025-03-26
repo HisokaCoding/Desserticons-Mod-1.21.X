@@ -13,9 +13,11 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.registry.entry.RegistryEntryList;
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -171,9 +173,10 @@ public class CustomPortalBlock extends Block implements Portal {
         BlockPos targetPos = new BlockPos(0, 0, 0);
 
         // Ищем блок бамбука внутри структуры
-        System.out.println(targetPos);
         targetPos = findBlockInStructure(netherWorld, targetPos);
-        System.out.println(targetPos);
+        if (entity instanceof ServerPlayerEntity player) {
+            player.sendMessage(Text.literal("Для Вас бронируют столик, не уходите)"), false);
+        }
         if (targetPos != null) {
             targetPos = new BlockPos(targetPos.getX(), targetPos.getY() + 2, targetPos.getZ());
         }
@@ -188,9 +191,9 @@ public class CustomPortalBlock extends Block implements Portal {
      * Метод ищет определённый блок внутри найденной структуры
      */
     private BlockPos findBlockInStructure(ServerWorld world, BlockPos center) {
-        for (int x = -200; x <= 200; x++) {
-            for (int y = -200; y <= 200; y++) {
-                for (int z = -200; z <= 200; z++) {
+        for (int x = -500; x <= 500; x++) {
+            for (int y = 0; y <= 250; y++) {
+                for (int z = -500; z <= 500; z++) {
                     BlockPos checkPos = center.add(x, y, z);
                     if (world.getBlockState(checkPos).isOf(Blocks.BAMBOO_BLOCK)) {
                         return checkPos; // Найден блок бамбука

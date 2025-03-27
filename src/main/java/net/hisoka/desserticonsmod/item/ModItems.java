@@ -2,8 +2,7 @@ package net.hisoka.desserticonsmod.item;
 
 import net.hisoka.desserticonsmod.DesserticonsMod;
 import net.hisoka.desserticonsmod.entity.ModEntities;
-import net.hisoka.desserticonsmod.item.custom.CigarettesItem;
-import net.hisoka.desserticonsmod.item.custom.HookahItem;
+import net.hisoka.desserticonsmod.item.custom.*;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.SpawnEggItem;
@@ -24,17 +23,17 @@ public class ModItems {
 
 
     public static final Item PREMIATA_BOOTS = registerItem("premiata_boots",
-            new ArmorItem(ModArmorMaterials.DESSERTICONS_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
-                    .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(50))));
+            new PremiataBootsItem(ModArmorMaterials.DESSERTICONS_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(500))));
     public static final Item ADIDAS_LEGGINGS = registerItem("adidas_leggings",
-            new ArmorItem(ModArmorMaterials.DESSERTICONS_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings()
-                    .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(80))));
+            new AdidasLeggingsItem(ModArmorMaterials.DESSERTICONS_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(800))));
     public static final Item MOSCOW_HOODIE = registerItem("moscow_hoodie",
-            new ArmorItem(ModArmorMaterials.DESSERTICONS_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings()
-                    .maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(100))));
+            new MoscowHoodieItem(ModArmorMaterials.DESSERTICONS_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(1000))));
     public static final Item Z_HELMET = registerItem("z_helmet",
-            new ArmorItem(ModArmorMaterials.DESSERTICONS_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
-                    .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(60))));
+            new ZHelmetItem(ModArmorMaterials.DESSERTICONS_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(600))));
 
     public static final Item CABBA_SPAWN_EGG = registerItem("cabba_spawn_egg",
             new SpawnEggItem(ModEntities.CABBA, 0xE0E0E0, 0x808080, new Item.Settings()));

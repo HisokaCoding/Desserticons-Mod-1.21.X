@@ -38,7 +38,7 @@ public class ModEntities {
     public static final EntityType<YuraEntity> YURA = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(DesserticonsMod.MOD_ID,"yura"),
             EntityType.Builder.create(YuraEntity::new, SpawnGroup.CREATURE)
-                    .dimensions(2f, 3f).build());
+                    .dimensions(1f, 3f).build());
 
     public static void registerModEntities(){
         DesserticonsMod.LOGGER.info("Registering Mod Entities for " + DesserticonsMod.MOD_ID);

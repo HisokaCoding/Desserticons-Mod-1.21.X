@@ -62,6 +62,25 @@
       ]
     },
 
+  "yura_ambient": {
+    "subtitle": "sounds.desserticonsmod.yura_ambient",
+    "sounds": [
+      "desserticonsmod:yura_ambient"
+    ]
+  },
+  "yura_hurt": {
+    "subtitle": "sounds.desserticonsmod.yura_hurt",
+    "sounds": [
+      "desserticonsmod:yura_hurt"
+    ]
+  },
+  "yura_death": {
+    "subtitle": "sounds.desserticonsmod.yura_death",
+    "sounds": [
+      "desserticonsmod:yura_death"
+    ]
+  },
+
   "jora_ambient": {
     "subtitle": "sounds.desserticonsmod.jora_ambient",
     "sounds": [

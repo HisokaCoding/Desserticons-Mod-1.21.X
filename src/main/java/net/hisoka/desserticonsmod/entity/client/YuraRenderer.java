@@ -11,7 +11,7 @@ import net.minecraft.util.Identifier;
 public class YuraRenderer extends MobEntityRenderer<YuraEntity, YuraModel<YuraEntity>> {
 
     public YuraRenderer(EntityRendererFactory.Context context) {
-        super(context, new YuraModel<>(context.getPart(YuraModel.YURA)), 0.25f);
+        super(context, new YuraModel<>(context.getPart(YuraModel.YURA)), 0.5f);
     }
 
     @Override

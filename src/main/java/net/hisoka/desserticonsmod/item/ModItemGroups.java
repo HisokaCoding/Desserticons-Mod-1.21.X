@@ -34,6 +34,7 @@ public class ModItemGroups {
                         entries.add(ModItems.ROMA_SPAWN_EGG);
                         entries.add(ModItems.ARKAWA_SPAWN_EGG);
                         entries.add(ModItems.JORA_SPAWN_EGG);
+                        entries.add(ModItems.YURA_SPAWN_EGG);
                     }).build());
 
     public static void registerItemGroups(){

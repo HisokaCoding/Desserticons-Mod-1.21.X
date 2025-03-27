@@ -15,6 +15,7 @@
   "item.desserticonsmod.roma_spawn_egg": "Roma Spawn Egg",
   "item.desserticonsmod.arkawa_spawn_egg": "Arkawa Spawn Egg",
   "item.desserticonsmod.jora_spawn_egg": "Jora Spawn Egg",
+  "item.desserticonsmod.yura_spawn_egg": "Yura Spawn Egg",
 
   "block.desserticonsmod.desserticoin_block": "Block of Desserticoins",
 
@@ -24,5 +25,6 @@
   "entity.desserticonsmod.timan": "Timan",
   "entity.desserticonsmod.roma": "Roma",
   "entity.desserticonsmod.arkawa": "Arkawa",
-  "entity.desserticonsmod.jora": "Jora"
+  "entity.desserticonsmod.jora": "Jora",
+  "entity.desserticonsmod.yura": "Yura"
 }

@@ -1,7 +1,6 @@
 package net.hisoka.desserticonsmod.entity.client;
 
 import net.hisoka.desserticonsmod.DesserticonsMod;
-import net.hisoka.desserticonsmod.entity.custom.ArkawaEntity;
 import net.hisoka.desserticonsmod.entity.custom.JoraEntity;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRendererFactory;

@@ -26,9 +26,6 @@ public class ModBlocks {
                     .luminance(state -> 10)
                     .strength(-1.0F)));
 
-    public static final Block BLOCK_WITH_PROTECTION = registerBlock("block_with_protection",
-            new Block(AbstractBlock.Settings.create()
-                    .strength(-1.0F)));
 
     public static void registerRenderLayer() {
         BlockRenderLayerMap.INSTANCE.putBlock(CUSTOM_PORTAL_BLOCK, RenderLayer.getTranslucent());

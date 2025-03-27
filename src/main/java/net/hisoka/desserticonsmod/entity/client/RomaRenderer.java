@@ -2,7 +2,6 @@ package net.hisoka.desserticonsmod.entity.client;
 
 import net.hisoka.desserticonsmod.DesserticonsMod;
 import net.hisoka.desserticonsmod.entity.custom.RomaEntity;
-import net.hisoka.desserticonsmod.entity.custom.TimanEntity;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.MobEntityRenderer;

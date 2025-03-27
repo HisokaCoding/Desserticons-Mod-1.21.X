@@ -1,6 +1,5 @@
 package net.hisoka.desserticonsmod.entity.custom;
 
-import net.hisoka.desserticonsmod.block.ModBlocks;
 import net.hisoka.desserticonsmod.item.ModItems;
 import net.hisoka.desserticonsmod.sound.ModSounds;
 import net.minecraft.entity.AnimationState;

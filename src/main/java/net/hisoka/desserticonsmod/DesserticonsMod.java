@@ -1,7 +1,6 @@
 package net.hisoka.desserticonsmod;
 
 import net.fabricmc.api.ModInitializer;
-
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.hisoka.desserticonsmod.block.ModBlocks;
 import net.hisoka.desserticonsmod.entity.ModEntities;
@@ -11,10 +10,6 @@ import net.hisoka.desserticonsmod.item.ModItemGroups;
 import net.hisoka.desserticonsmod.item.ModItems;
 import net.hisoka.desserticonsmod.sound.ModSounds;
 import net.hisoka.desserticonsmod.world.gen.ModEntitySpawns;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.util.Identifier;
-import net.minecraft.world.gen.structure.Structure;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -33,6 +28,7 @@ public class DesserticonsMod implements ModInitializer {
 		ModEvents.register();
 
 		ModBlocks.registerRenderLayer();
+
 
 		FabricDefaultAttributeRegistry.register(ModEntities.CABBA, CabbaEntity.createMobAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.TIMAN, TimanEntity.createTimanAttributes());

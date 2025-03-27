@@ -29,6 +29,10 @@ public class ModSounds {
     public static SoundEvent YURA_DEATH = registerSoundEvent("yura_death");
     public static SoundEvent YURA_AMBIENT = registerSoundEvent("yura_ambient");
 
+    public static SoundEvent SEMEN_HURT = registerSoundEvent("semen_hurt");
+    public static SoundEvent SEMEN_DEATH = registerSoundEvent("semen_death");
+    public static SoundEvent SEMEN_AMBIENT = registerSoundEvent("semen_ambient");
+
     private static SoundEvent registerSoundEvent(String name){
         Identifier id = Identifier.of(DesserticonsMod.MOD_ID, name);
         return Registry.register(Registries.SOUND_EVENT, id, SoundEvent.of(id));

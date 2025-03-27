@@ -101,15 +101,15 @@ public class CabbaEntity extends PathAwareEntity implements Merchant {
         tradeOffers.add(new TradeOffer(
                 new TradedItem(ModItems.DESSERTICOIN, 9),
                 new ItemStack(ModBlocks.DESSERTICOIN_BLOCK, 1),
-                10, 5, 0.05f));
+                14, 5, 0.05f));
         tradeOffers.add(new TradeOffer(
                 new TradedItem(ModItems.DESSERTICOIN, 2),
                 new ItemStack(ModItems.CIGARETTES, 1),
-                10, 5, 0.05f));
+                100, 5, 0.05f));
         tradeOffers.add(new TradeOffer(
                 new TradedItem(ModItems.DESSERTICOIN, 3),
                 new ItemStack(ModItems.ENERGYDRINK, 1),
-                10, 5, 0.05f));
+                100, 5, 0.05f));
     }
 
 

@@ -22,7 +22,7 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 
-public class YuraEntity extends PathAwareEntity {
+public class SemenEntity extends PathAwareEntity{
 
     public AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationCooldown = 0;
@@ -50,16 +50,16 @@ public class YuraEntity extends PathAwareEntity {
 
 
 
-    public YuraEntity(EntityType<? extends PathAwareEntity> entityType, World world) {
+    public SemenEntity(EntityType<? extends PathAwareEntity> entityType, World world) {
         super(entityType, world);
     }
 
 
 
-    public static DefaultAttributeContainer.Builder createYuraAttributes() {
+    public static DefaultAttributeContainer.Builder createSemenAttributes() {
         return MobEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 100.0)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.6);
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 200.0)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.4);
     }
 
 
@@ -76,7 +76,7 @@ public class YuraEntity extends PathAwareEntity {
 
     private void dropItems() {
         this.dropItem(new ItemStack(ModItems.DESSERTICOIN, 1).getItem());
-        this.dropItem(new ItemStack(Items.COOKED_PORKCHOP, 1).getItem());
+        this.dropItem(new ItemStack(ModItems.PROTEIN, 1).getItem());
     }
 
     @Override
@@ -98,16 +98,14 @@ public class YuraEntity extends PathAwareEntity {
     @Override
     protected ActionResult interactMob(PlayerEntity player, Hand hand) {
         ItemStack itemStack = player.getStackInHand(hand);
-        if (!itemStack.isOf(ModItems.DESSERTICOIN) || player.getInventory().count(ModItems.DESSERTICOIN) < 3) {
+        if (!itemStack.isOf(ModItems.PROTEIN)) {
             return ActionResult.PASS;
-        } else if (itemStack.isOf(ModItems.DESSERTICOIN) && player.getInventory().count(ModItems.DESSERTICOIN) >= 3){
-            itemStack.decrementUnlessCreative(3, player);
-            ItemStack protein = new ItemStack(ModItems.PROTEIN);
-            ItemEntity itemEntity = new ItemEntity(this.getWorld(), this.getX(), this.getY(), this.getZ(), protein);
+        } else {
+            itemStack.decrementUnlessCreative(1, player);
+            ItemStack zhelmet = new ItemStack(ModItems.Z_HELMET);
+            ItemEntity itemEntity = new ItemEntity(this.getWorld(), this.getX(), this.getY(), this.getZ(), zhelmet);
             this.getWorld().spawnEntity(itemEntity);
             return ActionResult.success(this.getWorld().isClient);
-        } else {
-            return ActionResult.PASS;
         }
     }
 
@@ -115,16 +113,17 @@ public class YuraEntity extends PathAwareEntity {
 
     protected SoundEvent getAmbientSound() {
         if (Random.create().nextInt(4) == 0) {
-            return ModSounds.YURA_AMBIENT;
+            return ModSounds.SEMEN_AMBIENT;
         }
         return null;
     }
 
     @Override
     protected SoundEvent getDeathSound() {
-        return ModSounds.YURA_DEATH;
+        return ModSounds.SEMEN_DEATH;
     }
 
     @Override
-    protected SoundEvent getHurtSound(DamageSource source) {return ModSounds.YURA_HURT;}
+    protected SoundEvent getHurtSound(DamageSource source) {return ModSounds.SEMEN_HURT;}
+
 }

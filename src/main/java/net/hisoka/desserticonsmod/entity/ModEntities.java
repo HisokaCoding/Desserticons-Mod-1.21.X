@@ -40,6 +40,11 @@ public class ModEntities {
             EntityType.Builder.create(YuraEntity::new, SpawnGroup.CREATURE)
                     .dimensions(1f, 3f).build());
 
+    public static final EntityType<SemenEntity> SEMEN = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(DesserticonsMod.MOD_ID,"semen"),
+            EntityType.Builder.create(SemenEntity::new, SpawnGroup.CREATURE)
+                    .dimensions(1f, 2f).build());
+
     public static void registerModEntities(){
         DesserticonsMod.LOGGER.info("Registering Mod Entities for " + DesserticonsMod.MOD_ID);
     }

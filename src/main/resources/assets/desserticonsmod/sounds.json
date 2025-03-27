@@ -81,6 +81,25 @@
     ]
   },
 
+  "semen_ambient": {
+    "subtitle": "sounds.desserticonsmod.semen_ambient",
+    "sounds": [
+      "desserticonsmod:semen_ambient"
+    ]
+  },
+  "semen_hurt": {
+    "subtitle": "sounds.desserticonsmod.semen_hurt",
+    "sounds": [
+      "desserticonsmod:semen_hurt"
+    ]
+  },
+  "semen_death": {
+    "subtitle": "sounds.desserticonsmod.semen_death",
+    "sounds": [
+      "desserticonsmod:semen_death"
+    ]
+  },
+
   "jora_ambient": {
     "subtitle": "sounds.desserticonsmod.jora_ambient",
     "sounds": [

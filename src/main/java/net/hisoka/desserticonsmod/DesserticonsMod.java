@@ -36,5 +36,6 @@ public class DesserticonsMod implements ModInitializer {
 		FabricDefaultAttributeRegistry.register(ModEntities.ARKAWA, ArkawaEntity.createMobAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.JORA, JoraEntity.createJoraAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.YURA, YuraEntity.createYuraAttributes());
+		FabricDefaultAttributeRegistry.register(ModEntities.SEMEN, YuraEntity.createYuraAttributes());
 	}
 }

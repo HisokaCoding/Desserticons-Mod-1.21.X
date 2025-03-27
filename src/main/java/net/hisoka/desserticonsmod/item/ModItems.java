@@ -17,6 +17,7 @@ public class ModItems {
     public static final Item CRYPTOCOIN = registerItem("cryptocoin", new Item(new Item.Settings()));
     public static final Item BASKET = registerItem("basket", new Item(new Item.Settings()));
     public static final Item ENERGYDRINK = registerItem("energydrink", new Item(new Item.Settings().food(ModFoodComponents.ENERGYDRINK)));
+    public static final Item PROTEIN = registerItem("protein", new Item(new Item.Settings().food(ModFoodComponents.PROTEIN)));
 
     public static final Item HOOKAH = registerItem("hookah", new HookahItem(new Item.Settings().maxDamage(32)));
     public static final Item CIGARETTES = registerItem("cigarettes", new CigarettesItem(new Item.Settings().maxDamage(20)));

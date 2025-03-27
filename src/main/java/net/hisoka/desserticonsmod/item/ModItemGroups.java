@@ -23,6 +23,7 @@ public class ModItemGroups {
                         entries.add(ModItems.CIGARETTES);
                         entries.add(ModItems.HOOKAH);
                         entries.add(ModItems.ENERGYDRINK);
+                        entries.add(ModItems.PROTEIN);
                         entries.add(ModItems.PREMIATA_BOOTS);
                         entries.add(ModItems.ADIDAS_LEGGINGS);
                         entries.add(ModItems.MOSCOW_HOODIE);

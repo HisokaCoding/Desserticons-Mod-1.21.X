@@ -38,6 +38,7 @@ public class ModItemGroups {
                         entries.add(ModItems.YURA_SPAWN_EGG);
                         entries.add(ModItems.SEMEN_SPAWN_EGG);
                         entries.add(ModItems.MAXIM_SPAWN_EGG);
+                        entries.add(ModItems.SEREGA_SPAWN_EGG);
                     }).build());
 
     public static void registerItemGroups(){

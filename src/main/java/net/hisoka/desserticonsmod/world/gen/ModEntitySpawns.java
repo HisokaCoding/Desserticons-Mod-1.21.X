@@ -13,5 +13,9 @@ public class ModEntitySpawns {
         BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.BADLANDS, BiomeKeys.DESERT, BiomeKeys.SAVANNA), SpawnGroup.CREATURE, ModEntities.ARKAWA, 100, 1, 1);
         BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.JUNGLE, BiomeKeys.BAMBOO_JUNGLE, BiomeKeys.SPARSE_JUNGLE), SpawnGroup.CREATURE, ModEntities.JORA, 200, 1, 1);
         BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.BEACH, BiomeKeys.RIVER, BiomeKeys.MANGROVE_SWAMP), SpawnGroup.CREATURE, ModEntities.YURA, 200, 1, 1);
+
+        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.TAIGA, BiomeKeys.SNOWY_TAIGA, BiomeKeys.OLD_GROWTH_PINE_TAIGA), SpawnGroup.CREATURE, ModEntities.SEMEN, 200, 1, 1);
+        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.FOREST, BiomeKeys.BIRCH_FOREST, BiomeKeys.FLOWER_FOREST), SpawnGroup.CREATURE, ModEntities.MAXIM, 200, 1, 1);
+        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.FOREST, BiomeKeys.BIRCH_FOREST, BiomeKeys.FLOWER_FOREST), SpawnGroup.CREATURE, ModEntities.SEREGA, 200, 1, 1);
     }
 }

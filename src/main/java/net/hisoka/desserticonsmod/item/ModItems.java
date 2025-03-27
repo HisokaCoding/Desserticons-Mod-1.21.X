@@ -52,6 +52,8 @@ public class ModItems {
             new SpawnEggItem(ModEntities.SEMEN, 0xFFE5CC, 0x99CCFF, new Item.Settings()));
     public static final Item MAXIM_SPAWN_EGG = registerItem("maxim_spawn_egg",
             new SpawnEggItem(ModEntities.MAXIM, 0x202020, 0xFFFFFF, new Item.Settings()));
+    public static final Item SEREGA_SPAWN_EGG = registerItem("serega_spawn_egg",
+            new SpawnEggItem(ModEntities.SEREGA, 0x202020, 0xFFFFFF, new Item.Settings()));
 
 
     private static Item registerItem(String name, Item item){

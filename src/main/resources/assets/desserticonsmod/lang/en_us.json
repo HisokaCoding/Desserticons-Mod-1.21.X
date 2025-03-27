@@ -19,6 +19,7 @@
   "item.desserticonsmod.yura_spawn_egg": "Yura Spawn Egg",
   "item.desserticonsmod.semen_spawn_egg": "Semen Spawn Egg",
   "item.desserticonsmod.maxim_spawn_egg": "Maxim Spawn Egg",
+  "item.desserticonsmod.serega_spawn_egg": "Serega Spawn Egg",
 
   "block.desserticonsmod.desserticoin_block": "Block of Desserticoins",
 
@@ -31,5 +32,6 @@
   "entity.desserticonsmod.jora": "Jora",
   "entity.desserticonsmod.yura": "Yura",
   "entity.desserticonsmod.maxim": "Maxim",
+  "entity.desserticonsmod.serega": "Serega",
   "entity.desserticonsmod.semen": "Semen"
 }

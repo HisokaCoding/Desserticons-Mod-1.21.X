@@ -37,6 +37,10 @@ public class ModSounds {
     public static SoundEvent MAXIM_DEATH = registerSoundEvent("maxim_death");
     public static SoundEvent MAXIM_AMBIENT = registerSoundEvent("maxim_ambient");
 
+    public static SoundEvent SEREGA_HURT = registerSoundEvent("serega_hurt");
+    public static SoundEvent SEREGA_DEATH = registerSoundEvent("serega_death");
+    public static SoundEvent SEREGA_AMBIENT = registerSoundEvent("serega_ambient");
+
     private static SoundEvent registerSoundEvent(String name){
         Identifier id = Identifier.of(DesserticonsMod.MOD_ID, name);
         return Registry.register(Registries.SOUND_EVENT, id, SoundEvent.of(id));

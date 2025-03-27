@@ -81,6 +81,25 @@
     ]
   },
 
+  "serega_ambient": {
+    "subtitle": "sounds.desserticonsmod.serega_ambient",
+    "sounds": [
+      "desserticonsmod:serega_ambient"
+    ]
+  },
+  "serega_hurt": {
+    "subtitle": "sounds.desserticonsmod.serega_hurt",
+    "sounds": [
+      "desserticonsmod:serega_hurt"
+    ]
+  },
+  "serega_death": {
+    "subtitle": "sounds.desserticonsmod.serega_death",
+    "sounds": [
+      "desserticonsmod:serega_death"
+    ]
+  },
+
   "yura_ambient": {
     "subtitle": "sounds.desserticonsmod.yura_ambient",
     "sounds": [

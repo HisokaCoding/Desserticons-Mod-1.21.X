@@ -15,12 +15,19 @@ import net.minecraft.util.Identifier;
 public class ModBlocks {
 
     public static final Block DESSERTICOIN_BLOCK = registerBlock("desserticoin_block",
-            new Block(AbstractBlock.Settings.create().strength(4f)
+            new Block(AbstractBlock.Settings.create()
+                    .strength(4f)
                     .requiresTool().sounds(BlockSoundGroup.METAL)));
 
     public static final Block CUSTOM_PORTAL_BLOCK = registerBlock("custom_portal_block",
             new CustomPortalBlock(AbstractBlock.Settings.create()
                     .noCollision()
+                    .nonOpaque()
+                    .luminance(state -> 10)
+                    .strength(-1.0F)));
+
+    public static final Block BLOCK_WITH_PROTECTION = registerBlock("block_with_protection",
+            new Block(AbstractBlock.Settings.create()
                     .strength(-1.0F)));
 
     public static void registerRenderLayer() {

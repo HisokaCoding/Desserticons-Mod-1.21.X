@@ -32,6 +32,8 @@ public class DesserticonsMod implements ModInitializer {
 		ModSounds.registerSounds();
 		ModEvents.register();
 
+		ModBlocks.registerRenderLayer();
+
 		FabricDefaultAttributeRegistry.register(ModEntities.CABBA, CabbaEntity.createMobAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.TIMAN, TimanEntity.createTimanAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.ROMA, RomaEntity.createRomaAttributes());

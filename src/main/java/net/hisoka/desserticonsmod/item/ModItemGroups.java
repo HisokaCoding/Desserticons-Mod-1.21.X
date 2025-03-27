@@ -20,6 +20,7 @@ public class ModItemGroups {
                         entries.add(ModItems.DESSERTICOIN);
                         entries.add(ModItems.CRYPTOCOIN);
                         entries.add(ModItems.BASKET);
+                        entries.add(ModItems.FOOTBALL);
                         entries.add(ModItems.CIGARETTES);
                         entries.add(ModItems.HOOKAH);
                         entries.add(ModItems.ENERGYDRINK);
@@ -36,6 +37,7 @@ public class ModItemGroups {
                         entries.add(ModItems.JORA_SPAWN_EGG);
                         entries.add(ModItems.YURA_SPAWN_EGG);
                         entries.add(ModItems.SEMEN_SPAWN_EGG);
+                        entries.add(ModItems.MAXIM_SPAWN_EGG);
                     }).build());
 
     public static void registerItemGroups(){

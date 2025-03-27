@@ -1,4 +1,4 @@
-// 1.21	2025-03-27T20:36:14.3366792	Desserticons Mod/Model Definitions
+// 1.21	2025-03-27T21:39:48.4035547	Desserticons Mod/Model Definitions
 019ccbf7353da0e07882ff4a73ff1f0ea2fe0b62 assets\desserticonsmod\models\item\adidas_leggings_copper_trim.json
 0807cce6bfe03f51441e4c979f929ffebe149cd5 assets\desserticonsmod\models\item\z_helmet.json
 0b8be0c3738b9c7b2eead263954e3ab61ecdcf3a assets\desserticonsmod\models\item\moscow_hoodie_gold_trim.json
@@ -37,6 +37,7 @@ f173c55285d6abb03ce5569c30d84a414f295e3a assets\desserticonsmod\models\item\prem
 bdbf7e22bb339907672f64d393876494369edff8 assets\desserticonsmod\models\item\adidas_leggings_gold_trim.json
 8d0354e69528111a221081c560e1331cd481b66a assets\desserticonsmod\models\item\z_helmet_iron_trim.json
 f16b0139f73bad83b86b423037f101a1d4fbf803 assets\desserticonsmod\models\item\premiata_boots_gold_trim.json
+c28f0283962de3e84ebea197c6677e41618a5599 assets\desserticonsmod\models\item\football.json
 14b03677c3bbf25f6b0585876c042137b7fb9d0e assets\desserticonsmod\models\item\z_helmet_diamond_trim.json
 419c0888019a61a57542bb009f3695ce63076498 assets\desserticonsmod\models\item\adidas_leggings_iron_trim.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets\desserticonsmod\models\item\yura_spawn_egg.json
@@ -45,6 +46,7 @@ f16b0139f73bad83b86b423037f101a1d4fbf803 assets\desserticonsmod\models\item\prem
 82d90a73cc889317419ad34b54fdc5ba89ce0a1b assets\desserticonsmod\models\item\adidas_leggings_lapis_trim.json
 f11db816b41dd19fc9109d1feefabcb9efc79de7 assets\desserticonsmod\models\item\premiata_boots_quartz_trim.json
 d6cad312adfc448d572de29612d948c19eb54ce8 assets\desserticonsmod\models\item\premiata_boots_redstone_trim.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets\desserticonsmod\models\item\maxim_spawn_egg.json
 1491274cc95abc47c76f784f20363cede951399f assets\desserticonsmod\models\item\z_helmet_quartz_trim.json
 ba45eab4b7f73cb515b91cdc22755cfa9edfa976 assets\desserticonsmod\models\item\moscow_hoodie_copper_trim.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets\desserticonsmod\models\item\cabba_spawn_egg.json

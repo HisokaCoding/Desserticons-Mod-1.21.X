@@ -62,6 +62,25 @@
       ]
     },
 
+  "maxim_ambient": {
+    "subtitle": "sounds.desserticonsmod.maxim_ambient",
+    "sounds": [
+      "desserticonsmod:maxim_ambient"
+    ]
+  },
+  "maxim_hurt": {
+    "subtitle": "sounds.desserticonsmod.maxim_hurt",
+    "sounds": [
+      "desserticonsmod:maxim_hurt"
+    ]
+  },
+  "maxim_death": {
+    "subtitle": "sounds.desserticonsmod.maxim_death",
+    "sounds": [
+      "desserticonsmod:maxim_death"
+    ]
+  },
+
   "yura_ambient": {
     "subtitle": "sounds.desserticonsmod.yura_ambient",
     "sounds": [

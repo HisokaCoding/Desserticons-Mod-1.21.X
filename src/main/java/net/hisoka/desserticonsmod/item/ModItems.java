@@ -15,6 +15,7 @@ public class ModItems {
     public static final Item DESSERTICOIN = registerItem("desserticoin", new Item(new Item.Settings()));
     public static final Item CRYPTOCOIN = registerItem("cryptocoin", new Item(new Item.Settings()));
     public static final Item BASKET = registerItem("basket", new Item(new Item.Settings()));
+    public static final Item FOOTBALL = registerItem("football", new Item(new Item.Settings()));
     public static final Item ENERGYDRINK = registerItem("energydrink", new Item(new Item.Settings().food(ModFoodComponents.ENERGYDRINK)));
     public static final Item PROTEIN = registerItem("protein", new Item(new Item.Settings().food(ModFoodComponents.PROTEIN)));
 
@@ -49,6 +50,8 @@ public class ModItems {
             new SpawnEggItem(ModEntities.YURA, 0x99CCFF, 0xFFE5CC, new Item.Settings()));
     public static final Item SEMEN_SPAWN_EGG = registerItem("semen_spawn_egg",
             new SpawnEggItem(ModEntities.SEMEN, 0xFFE5CC, 0x99CCFF, new Item.Settings()));
+    public static final Item MAXIM_SPAWN_EGG = registerItem("maxim_spawn_egg",
+            new SpawnEggItem(ModEntities.MAXIM, 0x202020, 0xFFFFFF, new Item.Settings()));
 
 
     private static Item registerItem(String name, Item item){

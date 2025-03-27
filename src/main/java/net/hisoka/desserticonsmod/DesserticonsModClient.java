@@ -32,5 +32,8 @@ public class DesserticonsModClient implements ClientModInitializer {
 
         EntityModelLayerRegistry.registerModelLayer(SemenModel.SEMEN, SemenModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.SEMEN, SemenRenderer::new);
+
+        EntityModelLayerRegistry.registerModelLayer(MaximModel.MAXIM, MaximModel::getTexturedModelData);
+        EntityRendererRegistry.register(ModEntities.MAXIM, MaximRenderer::new);
     }
 }

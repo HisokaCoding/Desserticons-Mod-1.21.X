@@ -33,6 +33,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.PROTEIN, Models.GENERATED);
         itemModelGenerator.register(ModItems.BASKET, Models.GENERATED);
         itemModelGenerator.register(ModItems.HOOKAH, Models.GENERATED);
+        itemModelGenerator.register(ModItems.FOOTBALL, Models.GENERATED);
 
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.PREMIATA_BOOTS));
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.ADIDAS_LEGGINGS));
@@ -52,6 +53,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.YURA_SPAWN_EGG,
                 new Model(Optional.of(Identifier.of("item/template_spawn_egg")),Optional.empty()));
         itemModelGenerator.register(ModItems.SEMEN_SPAWN_EGG,
+                new Model(Optional.of(Identifier.of("item/template_spawn_egg")),Optional.empty()));
+        itemModelGenerator.register(ModItems.MAXIM_SPAWN_EGG,
                 new Model(Optional.of(Identifier.of("item/template_spawn_egg")),Optional.empty()));
     }
 }

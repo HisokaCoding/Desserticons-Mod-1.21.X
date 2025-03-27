@@ -7,6 +7,7 @@
   "item.desserticonsmod.z_helmet": "Z Helmet",
   "item.desserticonsmod.cigarettes": "Cigarettes",
   "item.desserticonsmod.basket": "Basketball Ball",
+  "item.desserticonsmod.football": "Football Ball",
   "item.desserticonsmod.hookah": "Hookah",
   "item.desserticonsmod.energydrink": "Energy Drink",
   "item.desserticonsmod.protein": "Protein",
@@ -17,6 +18,7 @@
   "item.desserticonsmod.jora_spawn_egg": "Jora Spawn Egg",
   "item.desserticonsmod.yura_spawn_egg": "Yura Spawn Egg",
   "item.desserticonsmod.semen_spawn_egg": "Semen Spawn Egg",
+  "item.desserticonsmod.maxim_spawn_egg": "Maxim Spawn Egg",
 
   "block.desserticonsmod.desserticoin_block": "Block of Desserticoins",
 
@@ -28,5 +30,6 @@
   "entity.desserticonsmod.arkawa": "Arkawa",
   "entity.desserticonsmod.jora": "Jora",
   "entity.desserticonsmod.yura": "Yura",
+  "entity.desserticonsmod.maxim": "Maxim",
   "entity.desserticonsmod.semen": "Semen"
 }

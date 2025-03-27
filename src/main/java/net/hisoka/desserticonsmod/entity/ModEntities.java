@@ -45,6 +45,11 @@ public class ModEntities {
             EntityType.Builder.create(SemenEntity::new, SpawnGroup.CREATURE)
                     .dimensions(1f, 2f).build());
 
+    public static final EntityType<MaximEntity> MAXIM = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(DesserticonsMod.MOD_ID,"maxim"),
+            EntityType.Builder.create(MaximEntity::new, SpawnGroup.CREATURE)
+                    .dimensions(1f, 2f).build());
+
     public static void registerModEntities(){
         DesserticonsMod.LOGGER.info("Registering Mod Entities for " + DesserticonsMod.MOD_ID);
     }

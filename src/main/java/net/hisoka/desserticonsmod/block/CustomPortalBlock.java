@@ -2,10 +2,14 @@ package net.hisoka.desserticonsmod.block;
 
 import com.mojang.datafixers.util.Pair;
 import net.hisoka.desserticonsmod.DesserticonsMod;
+import net.hisoka.desserticonsmod.item.ModItems;
 import net.hisoka.desserticonsmod.util.CustomTeleporter;
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -18,6 +22,7 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -173,10 +178,14 @@ public class CustomPortalBlock extends Block implements Portal {
         BlockPos targetPos = new BlockPos(0, 0, 0);
 
         // Ищем блок бамбука внутри структуры
-        targetPos = findBlockInStructure(netherWorld, targetPos);
         if (entity instanceof ServerPlayerEntity player) {
-            player.sendMessage(Text.literal("Для Вас бронируют столик, не уходите)"), false);
+            if (!isWearingFullArmor(player)) {
+                return;
+            } else {
+                player.sendMessage(Text.literal("Для Вас бронируют столик, не уходите)"), false);
+            }
         }
+        targetPos = findBlockInStructure(netherWorld, targetPos);
         if (targetPos != null) {
             targetPos = new BlockPos(targetPos.getX(), targetPos.getY() + 2, targetPos.getZ());
         }
@@ -192,17 +201,31 @@ public class CustomPortalBlock extends Block implements Portal {
      */
     private BlockPos findBlockInStructure(ServerWorld world, BlockPos center) {
         for (int x = -500; x <= 500; x++) {
-            for (int y = 0; y <= 250; y++) {
-                for (int z = -500; z <= 500; z++) {
-                    BlockPos checkPos = center.add(x, y, z);
-                    if (world.getBlockState(checkPos).isOf(Blocks.BAMBOO_BLOCK)) {
-                        return checkPos; // Найден блок бамбука
-                    }
+            for (int z = -500; z <= 500; z++) {
+                BlockPos checkPos = center.add(x, 139, z);
+                if (world.getBlockState(checkPos).isOf(Blocks.BAMBOO_BLOCK)) {
+                    return checkPos; // Найден блок бамбука
                 }
             }
         }
         return null; // Если блок не найден
     }
+
+
+
+    private boolean isWearingFullArmor(ServerPlayerEntity player) {
+        // Определённая броня (замени на свой вариант)
+        Item helmet = ModItems.Z_HELMET;
+        Item chestplate = ModItems.MOSCOW_HOODIE;
+        Item leggings = ModItems.ADIDAS_LEGGINGS;
+        Item boots = ModItems.PREMIATA_BOOTS;
+
+        return player.getEquippedStack(EquipmentSlot.HEAD).getItem() == helmet &&
+                player.getEquippedStack(EquipmentSlot.CHEST).getItem() == chestplate &&
+                player.getEquippedStack(EquipmentSlot.LEGS).getItem() == leggings &&
+                player.getEquippedStack(EquipmentSlot.FEET).getItem() == boots;
+    }
+
 
 
     @Override

@@ -1,0 +1,53 @@
+[
+  {
+    "section": "Desserticons Mod Project",
+    "disciplines": [
+      {
+        "discipline": "Hisoka Coding",
+        "titles": [
+          {
+            "title": "Studio Head of Hisoka Coding, Programmer, Designer, Animator",
+            "names": [
+              "Savva Andreev"
+            ]
+          }
+        ]
+      },
+      {
+        "discipline": "Actors",
+        "titles": [
+          {
+            "title": "Desserticons",
+            "names": [
+              "Yuriy Poloznikov",
+              "Arkadiy Aminov",
+              "Roman Kashin",
+              "Semen Kanayev",
+              "Georgiy Pliner",
+              "Sergey Vernigor",
+              "Maxim Belyaev",
+              "Timofey Demidovich"
+            ]
+          }
+        ]
+      },
+      {
+        "discipline": "Special Thanks",
+        "titles": [
+          {
+            "title": "Ideas",
+            "names": [
+              "Semen Kanayev"
+            ]
+          },
+          {
+            "title": "Guests",
+            "names": [
+              "Sonechka"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

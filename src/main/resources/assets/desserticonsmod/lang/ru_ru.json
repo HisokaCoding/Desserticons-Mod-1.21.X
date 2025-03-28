@@ -1,0 +1,38 @@
+{
+  "item.desserticonsmod.desserticoin": "Дессертикоин",
+  "item.desserticonsmod.cryptocoin": "Криптокоин",
+  "item.desserticonsmod.premiata_boots": "Кроссовки Premiata",
+  "item.desserticonsmod.adidas_leggings": "Штаны Adidas",
+  "item.desserticonsmod.moscow_hoodie": "Худи МОСКВА",
+  "item.desserticonsmod.z_helmet": "Шлем Z",
+  "item.desserticonsmod.cigarettes": "Сигареты",
+  "item.desserticonsmod.basket": "Баскетбольный мяч",
+  "item.desserticonsmod.football": "Футбольный мяч",
+  "item.desserticonsmod.hookah": "Кальян",
+  "item.desserticonsmod.energydrink": "Энергетик",
+  "item.desserticonsmod.protein": "Протеин",
+  "item.desserticonsmod.cabba_spawn_egg": "Яйцо спавна Саввы",
+  "item.desserticonsmod.timan_spawn_egg": "Яйцо спавна Тимана",
+  "item.desserticonsmod.roma_spawn_egg": "Яйцо спавна Ромы",
+  "item.desserticonsmod.arkawa_spawn_egg": "Яйцо спавна Аркаши",
+  "item.desserticonsmod.jora_spawn_egg": "Яйцо спавна Жоры",
+  "item.desserticonsmod.yura_spawn_egg": "Яйцо спавна Юры",
+  "item.desserticonsmod.semen_spawn_egg": "Яйцо спавна Семёна",
+  "item.desserticonsmod.maxim_spawn_egg": "Яйцо спавна Максима",
+  "item.desserticonsmod.serega_spawn_egg": "Яйцо спавна Серёги",
+
+  "block.desserticonsmod.desserticoin_block": "Блок Дессертикоинов",
+
+  "itemgroup.desserticonsmod.desserticons_items": "Предметы Дессертиконов",
+
+  "entity.desserticonsmod.cabba": "Савва",
+  "entity.desserticonsmod.timan": "Тиман",
+  "entity.desserticonsmod.roma": "Рома",
+  "entity.desserticonsmod.arkawa": "Аркаша",
+  "entity.desserticonsmod.jora": "Жора",
+  "entity.desserticonsmod.yura": "Юра",
+  "entity.desserticonsmod.maxim": "Максим",
+  "entity.desserticonsmod.serega": "Серёга",
+  "entity.desserticonsmod.sonechka": "Сонечка",
+  "entity.desserticonsmod.semen": "Семён"
+}

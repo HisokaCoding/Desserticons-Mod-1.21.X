@@ -9,8 +9,6 @@ import net.hisoka.desserticonsmod.entity.client.*;
 
 public class DesserticonsModClient implements ClientModInitializer {
 
-
-
     @Override
     public void onInitializeClient() {
 
@@ -44,5 +42,6 @@ public class DesserticonsModClient implements ClientModInitializer {
 
         EntityModelLayerRegistry.registerModelLayer(SonechkaModel.SONECHKA, SonechkaModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.SONECHKA, SonechkaRenderer::new);
+
     }
 }

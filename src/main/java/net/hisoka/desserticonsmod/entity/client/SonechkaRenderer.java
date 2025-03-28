@@ -1,7 +1,6 @@
 package net.hisoka.desserticonsmod.entity.client;
 
 import net.hisoka.desserticonsmod.DesserticonsMod;
-import net.hisoka.desserticonsmod.entity.custom.SeregaEntity;
 import net.hisoka.desserticonsmod.entity.custom.SonechkaEntity;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRendererFactory;

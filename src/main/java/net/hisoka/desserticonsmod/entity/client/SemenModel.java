@@ -2,7 +2,6 @@ package net.hisoka.desserticonsmod.entity.client;
 
 import net.hisoka.desserticonsmod.DesserticonsMod;
 import net.hisoka.desserticonsmod.entity.custom.SemenEntity;
-import net.hisoka.desserticonsmod.entity.custom.YuraEntity;
 import net.minecraft.client.model.*;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.entity.model.EntityModelLayer;

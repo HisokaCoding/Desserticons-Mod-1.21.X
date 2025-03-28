@@ -1,17 +1,13 @@
 package net.hisoka.desserticonsmod.event;
 
 
-import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.hisoka.desserticonsmod.block.ModBlocks;
 import net.hisoka.desserticonsmod.entity.ModEntities;
-import net.hisoka.desserticonsmod.item.ModArmorMaterials;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.mob.MobEntity;
-import net.minecraft.item.ArmorItem;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemStack;
-import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
 
